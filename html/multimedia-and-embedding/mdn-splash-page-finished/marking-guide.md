@@ -1,5 +1,5 @@
 #Marking guide for "Mozilla splash page"
-The following article outlines a marking guide for the MDN Learning Area HTML Assessment — [Mozilla splash page](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
+The following article outlines a marking guide for the MDN Learning Area HTML Assessment — [Mozilla splash page](https://developer.mozilla.org/en-US/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clearly cut.
 
