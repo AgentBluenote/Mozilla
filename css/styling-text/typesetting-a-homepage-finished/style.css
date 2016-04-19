@@ -149,6 +149,14 @@ ul, ol {
   margin: 1.6rem 0;
 }
 
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-latin;
+}
+
 /* nav menu */
 
 nav ul {
@@ -176,3 +184,7 @@ nav li a:focus, nav li a:hover {
   background: #a66;
 }
 
+nav li a:active {
+  color: white;
+  background: black;
+}
