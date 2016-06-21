@@ -79,14 +79,14 @@
       try {
         var result = geval(e.target.value);
       } catch(e) {
-        var result = e.message;
+        var result = 'error — ' + e.message;
       }
 
       var outputDiv = document.createElement('div');
       var outputPara = document.createElement('p');
 
       outputDiv.setAttribute('class','output');
-      outputPara.textContent = result;
+      outputPara.textContent = 'Result: ' + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
