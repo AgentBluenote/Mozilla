@@ -24,10 +24,10 @@ The overall mark awarded is out of 35. Work out their final mark, and then divid
 <dt>"look at the four selectors, and calculate the specificity weight for each one." (2 marks)</dt>
 <dd>The correct weights for each one are as follows (half a mark each):
   <ul>
-    <li>0022</li>
-    <li>0021</li>
-    <li>0021</li>
-    <li>0020</li>
+    <li>0012</li>
+    <li>0011</li>
+    <li>0011</li>
+    <li>0010</li>
   </ul>
 </dd>
 <dt>"Now it's time to put the right selector on the right rule set!" (4 marks)</dt>
