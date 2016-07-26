@@ -6,6 +6,6 @@ function createParagraph() {
 
 var buttons = document.querySelectorAll('button');
 
-for(i = 0; i < buttons.length ; i++) {
+for(var i = 0; i < buttons.length ; i++) {
   buttons[i].addEventListener('click', createParagraph);
 }
