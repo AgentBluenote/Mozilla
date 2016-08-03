@@ -41,6 +41,6 @@ function result() {
     
   }
 
-  story.textContent = 'make equal to newStory variable';
+  story.textContent = ;
   story.style.visibility = 'visible';
 }
