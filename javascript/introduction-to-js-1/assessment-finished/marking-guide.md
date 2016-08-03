@@ -3,7 +3,7 @@ The following guide outlines a marking guide for the MDN Learning Area JavaScrip
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 39. Work out their final mark, and then divide by 39 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](index.html) that would be awarded top marks. 
+The overall mark awarded is out of 39. Work out their final mark, and then divide by 39 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks. 
 
 ##Basic setup
 
