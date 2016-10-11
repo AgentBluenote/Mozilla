@@ -145,7 +145,7 @@ hr {
   float: left;
   padding: 2px;
   margin-right: 4px;
-} 
+}
 
 /* Combinators */
 
@@ -156,7 +156,7 @@ hr {
 
 #combinators ul a {
   text-decoration: none;
-  display: block;
+  display: inline-block;
   color: black;
   background-color: red;
   padding: 5px;
@@ -169,6 +169,6 @@ hr {
 }
 
 h1 + p {
-  font-style: bold;
+  font-weight: bold;
   color: blue;
 }
