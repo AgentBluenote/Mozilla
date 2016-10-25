@@ -8,7 +8,7 @@ var SauceLabs = require('saucelabs');
 
 var saucelabs = new SauceLabs({
     username : "YOUR-USER-NAME",
-    accessKey : "YOUR-ACCESS-KEY"
+    password : "YOUR-ACCESS-KEY"
 });
 
 var driver = new webdriver.Builder().
