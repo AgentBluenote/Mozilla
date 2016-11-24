@@ -57,14 +57,17 @@
       </ul>
 
     </div>
+
+    <p>Fields marked with an asterisk (*) are required.</p>
+
     <form>
       <div>
-        <label for="name">Enter your name:</label>
-        <input type="text" name="name" id="name">
+        <label for="name">Enter your name*:</label>
+        <input type="text" name="name" id="name" aria-required="true">
       </div>
       <div>
-        <label for="age">Enter your age:</label>
-        <input type="number" name="age" id="age">
+        <label for="age">Enter your age*:</label>
+        <input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true">
       </div>
       <div>
         <input type="submit">
