@@ -3,7 +3,7 @@ body {
   margin: 0 auto;
 }
 
-.right {
+.receiver-column {
   text-align: right;
 }
 
