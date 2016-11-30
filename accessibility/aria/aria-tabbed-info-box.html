@@ -29,33 +29,28 @@
 
   /* styling info-box tabs */
 
-  .info-box ul {
+  ul[role="tablist"] {
     padding-left: 0;
     margin-top: 0;
   }
 
-  .info-box li {
+  li[role="tab"] {
     float: left;
     list-style-type: none;
     width: 150px;
-  }
-
-  .info-box li a {
     display: inline-block;
-    text-decoration: none;
-    width: 100%;
     line-height: 3;
     background-color: red;
     color: black;
     text-align: center;
   }
 
-  .info-box li a:focus, .info-box li a:hover {
+  li[role="tab"]:focus, li[role="tab"]:hover {
     background-color: #a60000;
     color: white;
   }
 
-  .info-box li a.active {
+  li[role="tab"].active {
     background-color: #a60000;
     color: white;
   }
@@ -90,9 +85,9 @@
 
 <section class="info-box">
   <ul role="tablist">
-    <li><a href="#" class="active" role="tab" aria-selected="true">Tab 1</a></li>
-    <li><a href="#" role="tab" aria-selected="false">Tab 2</a></li>
-    <li><a href="#" role="tab" aria-selected="false">Tab 3</a></li>
+    <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
+    <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
+    <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
   </ul>
   <div class="panels">
     <article class="active-panel" role="tabpanel" aria-hidden="false">
@@ -121,7 +116,7 @@
 
 <script>
 
-var tabs = document.querySelectorAll('.info-box li a');
+var tabs = document.querySelectorAll('.info-box li');
 var panels = document.querySelectorAll('.info-box article');
 
 for(i = 0; i < tabs.length; i++) {
