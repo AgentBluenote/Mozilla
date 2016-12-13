@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Simple box drag example</title>
+    <title>Multi control box drag example</title>
     <style>
       html {
         font-family: sans-serif;
@@ -31,18 +31,29 @@
       document.body.width = window.innerWidth;
       document.body.height = window.innerHeight;
 
-      var mouseX, mouseY;
+      // Mouse controls
 
-      document.onmousemove = function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+      var posX, posY;
+
+      document.onmousemove = positionHandler;
+      document.ontouchmove = positionHandler;
+
+      function positionHandler(e) {
+        if ((e.clientX)&&(e.clientY)) {
+          posX = e.clientX;
+          posY = e.clientY;
+        } else if (e.targetTouches) {
+          posX = e.targetTouches[0].clientX;
+          posY = e.targetTouches[0].clientY;
+          e.preventDefault();
+        }
       }
 
       var div = document.querySelector('div');
 
-      var initialMouseX = null;
+      var initialPosX = null;
 
-      var initialMouseY = null;
+      var initialPosY = null;
 
       var initialBoxX, initialBoxY, rAF;
 
@@ -52,18 +63,24 @@
         movePanel();
       }
 
+      div.ontouchstart = function() {
+        initialBoxX = div.offsetLeft;
+        initialBoxY = div.offsetTop;
+        movePanel();
+      }
+
       document.onmouseup = stopMove;
 
       function movePanel() {
-        if(initialMouseX === null) {
-          initialMouseX = mouseX;
-          initialMouseY = mouseY;
+        if(initialPosX === null) {
+          initialPosX = posX;
+          initialPosY = posY;
         } else {
-          var mouseMoveX = mouseX - initialMouseX;
-          var mouseMoveY = mouseY - initialMouseY;
+          var posMoveX = posX - initialPosX;
+          var posMoveY = posY - initialPosY;
 
-          var offsetX = initialBoxX + mouseMoveX;
-          var offsetY = initialBoxY + mouseMoveY;
+          var offsetX = initialBoxX + posMoveX;
+          var offsetY = initialBoxY + posMoveY;
           console.log(offsetX + ' ' + offsetY);
 
           div.style.left = offsetX + 'px';
@@ -76,10 +93,10 @@
       function stopMove() {
         cancelAnimationFrame(rAF);
 
-        console.log('mousemove stopped');
+        console.log('move stopped');
 
-        initialMouseX = null;
-        initialMouseY = null;
+        initialPosX = null;
+        initialPosY = null;
       }
 
     </script>
