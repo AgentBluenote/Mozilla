@@ -45,6 +45,7 @@
         } else if (e.targetTouches) {
           posX = e.targetTouches[0].clientX;
           posY = e.targetTouches[0].clientY;
+          console.log(posX + ' ' + posY);
           e.preventDefault();
         }
       }
@@ -66,10 +67,12 @@
       div.ontouchstart = function() {
         initialBoxX = div.offsetLeft;
         initialBoxY = div.offsetTop;
+        console.log('touch started');
         movePanel();
       }
 
       document.onmouseup = stopMove;
+      document.ontouchend = stopMove;
 
       function movePanel() {
         if(initialPosX === null) {
@@ -81,7 +84,7 @@
 
           var offsetX = initialBoxX + posMoveX;
           var offsetY = initialBoxY + posMoveY;
-          console.log(offsetX + ' ' + offsetY);
+          // console.log(offsetX + ' ' + offsetY);
 
           div.style.left = offsetX + 'px';
           div.style.top = offsetY + 'px';
