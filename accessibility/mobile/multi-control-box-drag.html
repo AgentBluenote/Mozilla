@@ -53,9 +53,6 @@
 
       var initialPosY = null;
 
-      var initialBoxX = 0;
-      var initialBoxY = 0;
-
       var rAF;
 
       div.onmousedown = function() {
@@ -74,6 +71,7 @@
       document.ontouchend = stopMove;
 
       function movePanel() {
+        console.log('posX: ' + posX + ', posY: ' + posY + 'initialPosX: ' + initialPosX + ', initialPosY: ' + initialPosY + ', initialBoxX: ' + initialBoxX + ', initialBoxY: ' + initialBoxY);
         if(initialPosX === null) {
           initialPosX = posX;
           initialPosY = posY;
