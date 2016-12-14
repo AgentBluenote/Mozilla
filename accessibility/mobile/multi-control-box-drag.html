@@ -62,9 +62,10 @@
         movePanel();
       }
 
-      div.ontouchstart = function() {
+      div.ontouchstart = function(e) {
         initialBoxX = div.offsetLeft;
         initialBoxY = div.offsetTop;
+        positionHandler(e);
         movePanel();
       }
 
