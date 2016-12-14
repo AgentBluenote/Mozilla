@@ -73,7 +73,6 @@
       document.ontouchend = stopMove;
 
       function movePanel() {
-        console.log('posX: ' + posX + ', posY: ' + posY + 'initialPosX: ' + initialPosX + ', initialPosY: ' + initialPosY + ', initialBoxX: ' + initialBoxX + ', initialBoxY: ' + initialBoxY);
         if(initialPosX === null) {
           initialPosX = posX;
           initialPosY = posY;
@@ -83,7 +82,6 @@
 
           var offsetX = initialBoxX + posMoveX;
           var offsetY = initialBoxY + posMoveY;
-          console.log(offsetX + ' ' + offsetY);
 
           div.style.left = offsetX + 'px';
           div.style.top = offsetY + 'px';
@@ -95,12 +93,9 @@
       function stopMove() {
         cancelAnimationFrame(rAF);
 
-        console.log('move stopped');
-
         initialPosX = null;
         initialPosY = null;
       }
-
     </script>
   </body>
 </html>
