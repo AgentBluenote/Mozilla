@@ -1,9 +1,9 @@
-#Marking guide for "Image gallery"
+#Marking guide for "Adding features to our bouncing balls demo"
 The following guide outlines a marking guide for the "Introducing JavaScript Objects" module assessment, part of the MDN Learning Area JavaScript Topic — see [Adding features to our bouncing balls demo](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 45. Work out their final mark, and then divide by 45 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks. 
+The overall mark awarded is out of 45. Work out their final mark, and then divide by 45 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
 
 ##Creating our new objects
 
@@ -115,5 +115,3 @@ para.textContent = 'Ball count: ' + count;</pre>
   </ul>
 </dd>
 </dl>
-
-
