@@ -1,15 +1,15 @@
-#Marking guide for "Silly story generator"
-The following guide outlines a marking guide for the MDN Learning Area Accessibility Topic — [Accessibility troubleshooting](XXXXX). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
+#Marking guide for "Accessibility troubleshooting"
+The following guide outlines a marking guide for the MDN Learning Area Accessibility Topic — [Accessibility troubleshooting](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 37. Work out their final mark, and then divide by 37 and multiply by 100 to give a percentage mark. For reference, you can find a [finished verion of the site](index.html) that would be awarded top marks.
+The overall mark awarded is out of 37. Work out their final mark, and then divide by 37 and multiply by 100 to give a percentage mark. For reference, you can find a [finished version of the site](index.html) that would be awarded top marks.
 
 ##Color
 
 <dl>
 <dt>The text is difficult to read because of the current color scheme. Can you do a test of the current color contrast (text/background), report the results of the test, and then fix it by changing the assigned colors?</dt>
-<dd>Two marks for this — one for checking the current text/background contrast in a checker like (ADD NAME AND LINK TO CHECKER) and reporting the results in some way, and one for updating the current color scheme to one with good contrast (i.e. passes WCAG AA in the checker).</dd>
+<dd>Two marks for this — one for checking the current text/background contrast in a checker like WebAIM's [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) and reporting the results in some way, and one for updating the current color scheme to one with good contrast (i.e. passes WCAG AA in the checker).</dd>
 </dl>
 
 ##Semantic HTML
@@ -70,7 +70,7 @@ The overall mark awarded is out of 37. Work out their final mark, and then divid
 ##The table
 
 <dl>
-  <dt>The data table is not currently very accessible — it is hard for non-visual users like screenreader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?</dt>
+  <dt>The data table is not currently very accessible — it is hard for screenreader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?</dt>
   <dd>Six marks.
   <ul>
     <li>They should add a suitable summary of the table in a <code>summary</code> attribute or <code>&lt;caption&gt;</code> element.
