@@ -39,7 +39,7 @@ The overall mark awarded is out of 37. Work out their final mark, and then divid
 
 <dl>
   <dt>The images are currently inaccessible to screenreader users. Can you fix this?</dt>
-  <dd>Three marks. You can fix this by adding in alternative text in any suitable way; see [Text alternatives](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#Text_alternatives) — describing the image in the text and perhaps also using <code>aria-labelledby</code> to link the two is good. you could also use a plain old <code>alt</code> attribute.</dd>
+  <dd>Three marks. You can fix this by adding in alternative text in any suitable way; see <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a> — describing the image in the text and perhaps also using <code>aria-labelledby</code> to link the two is good. you could also use a plain old <code>alt</code> attribute.</dd>
 </dl>
 
 ##The audio player
@@ -64,7 +64,7 @@ The overall mark awarded is out of 37. Work out their final mark, and then divid
 
 <dl>
   <dt>The show/hide comment control button is not current keyboard-accessible. Can you make it keyboard accessible, both in terms of focusing it, and activating it using the return key?</dt>
-  <dd>Two marks. This can be managed easily by changing the <code>&lt;div&gt;</code> element that currently marks the button up to a <code>&lt;button&gt;</code> element. Or you could use <code>tabindex</code> and JavaScript to fix the button; see [Building keyboard accessibility back in](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in). The former is a much easier method however. </dd>
+  <dd>Two marks. This can be managed easily by changing the <code>&lt;div&gt;</code> element that currently marks the button up to a <code>&lt;button&gt;</code> element. Or you could use <code>tabindex</code> and JavaScript to fix the button; see <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>. The former is a much easier method however. </dd>
 </dl>
 
 ##The table
