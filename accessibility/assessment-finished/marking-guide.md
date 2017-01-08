@@ -26,7 +26,7 @@ The overall mark awarded is out of 37. Work out their final mark, and then divid
     <li>In the CSS file, <code>font[size="7"]</code>/<code>font[size="6"]</code>/<code>font[size="5"]</code> need to be replaced with <code>h1</code>/<code>h2</code>/<code>h3</code>.</li>
   </ul>
   </dd>
-  <dt>The navigation menu part of the site (wrapped in <code><div class="nav"></div>) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.</dt>
+  <dt>The navigation menu part of the site (wrapped in <code>&ly;div class="nav"&gt;&lt;/div&gt;</code>) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.</dt>
   <dd>Three marks.
   <ul>
     <li>The <code>&lt;div class="nav"&gt;&lt;/div&gt;</code> needs be replaced with <code>&lt;nav&gt;&lt;/nav&gt;</code></li>
