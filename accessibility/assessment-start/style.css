@@ -56,7 +56,7 @@ header {
 }
 
 div[class="nav"], article, footer, .secondary {
-  background-color: white;
+  background-color: green;
 }
 
 article, footer, .secondary {
@@ -212,9 +212,14 @@ audio {
   flex: 6;
 }
 
+.show-hide {
+  text-align: center;
+  width: 150px;
+}
+
 .comment-form input, .comment-form label, .show-hide {
   font-size: 1.6rem;
-  height: 32px;
+  line-height: 32px;
 }
 
 .comment-form input[type="submit"], .show-hide {

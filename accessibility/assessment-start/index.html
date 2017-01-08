@@ -25,7 +25,7 @@
         </ul>
 
         <form class="search">
-          <input type="search" name="q" placeholder="Search query" aria-label="Search through site content">
+          <input type="search" name="q" placeholder="Search query">
           <input type="submit" value="Go!">
         </form>
       </div>
@@ -50,17 +50,17 @@
         <table summary="Useful statistics about wild and urban bears">
           <thead>
             <tr>
-              <th scope="col">Bear Type</th>
-              <th scope="col">Coat</th>
-              <th scope="col">Adult size</th>
-              <th scope="col">Habitat</th>
-              <th scope="col">Lifespan</th>
-              <th scope="col">Diet</th>
+              <td>Bear Type</td>
+              <td>Coat</td>
+              <td>Adult size</td>
+              <td>Habitat</td>
+              <td>Lifespan</td>
+              <td>Diet</td>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Wild</th>
+              <td>Wild</td>
               <td>Brown or black</td>
               <td>1.4 to 2.8 meters</td>
               <td>Woods and forests</td>
@@ -68,7 +68,7 @@
               <td>Fish, meat, plants</td>
             </tr>
             <tr>
-              <th scope="row">Urban</th>
+              <td>Urban</td>
               <td>North Face</td>
               <td>18 to 22</td>
               <td>Condos and coffee shops</td>
@@ -80,13 +80,13 @@
 
         <font size="5">Habitats and Eating habits</font>
         <br><br>
-        Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages. The below image shows <span id="wild-label">a big brown wild bear, standing in a river looking for fish to eat</span>.
+        Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages.
         <br><br>
-        <img src="media/wild-bear.jpg" aria-labelledby="wild-label">
+        <img src="media/wild-bear.jpg">
         <br><br>
-        Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens. Below you can see <span id="urban-label">an urban polar bear, looking through the railings of his garden while contemplating whether to eat at Nandos or Taco Bell</span>.
+        Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens.
         <br><br>
-        <img src="media/urban-bear.jpg" aria-labelledby="urban-label">
+        <img src="media/urban-bear.jpg">
         <br><br>
         Urban bears will sleep anywhere they can, from bus shelters and parks, to the toilets in McDonalds, to their own apartment.
         <br><br>
@@ -112,7 +112,7 @@
 
         </aside>
         <section class="comments">
-          <button class="show-hide">Show comments</button>
+          <div class="show-hide">Show comments</div>
 
           <div class="comment-wrapper">
 
@@ -120,11 +120,11 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                <label for="name">Your name:</label>
+                Your name:
                 <input type="text" name="name" id="name" placeholder="Enter your name">
               </div>
               <div class="flex-pair">
-                <label for="comment">Your comment:</label>
+                Your comment:
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
