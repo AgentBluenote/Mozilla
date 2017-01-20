@@ -51,10 +51,6 @@ p, li, table {
 
 /* || header layout */
 
-header {
-  margin-bottom: 10px;
-}
-
 div[class="nav"], article, footer, .secondary {
   background-color: green;
 }
@@ -72,6 +68,7 @@ div[class="nav"] {
   background-color: ff80ff;
   display: flex;
   padding: 1% 0;
+  margin-bottom: 10px;
 }
 
 div[class="nav"] ul {

@@ -50,10 +50,6 @@ p, li {
 
 /* || header layout */
 
-header {
-  margin-bottom: 10px;
-}
-
 nav, article, aside, footer {
   background-color: white;
   padding: 1%;
@@ -63,6 +59,7 @@ nav {
   height: 50px;
   background-color: ff80ff;
   display: flex;
+  margin-bottom: 10px;
 }
 
 nav ul {
@@ -101,15 +98,15 @@ input {
 
 input[type="search"] {
   flex: 3;
-} 
+}
 
 input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
   background: #333;
   border: 0;
-  color: white; 
-} 
+  color: white;
+}
 
 /* || main layout */
 
