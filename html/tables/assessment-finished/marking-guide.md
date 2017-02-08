@@ -50,5 +50,3 @@ The overall mark awarded is out of 34. Work out their final mark, and then divid
     </ol>
   </dd>
 </dl>
-
-REMINDER: Also add tables module to learn sidebar.
