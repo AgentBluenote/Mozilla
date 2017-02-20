@@ -12,9 +12,6 @@ html {
 
 /* Selectors to be matched up with rulesets */
 
-
-
-
 .card article img
 .card footer
 .card header
@@ -45,4 +42,3 @@ html {
   max-height: 100%
   float: right;
 }
-

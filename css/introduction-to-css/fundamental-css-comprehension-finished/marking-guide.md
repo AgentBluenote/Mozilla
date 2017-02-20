@@ -3,7 +3,7 @@ The following guide outlines a marking guide for the MDN Learning Area HTML Topi
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 35. Work out their final mark, and then divide by 35 and multiply by 100 to give a percentage mark. For reference, you can find a [finished business card](index.html) that would be awarded top marks. 
+The overall mark awarded is out of 35. Work out their final mark, and then divide by 35 and multiply by 100 to give a percentage mark. For reference, you can find a [finished business card](index.html) that would be awarded top marks.
 
 ##Basic setup
 
@@ -21,8 +21,8 @@ The overall mark awarded is out of 35. Work out their final mark, and then divid
 ##Taking care of the provided selectors and rulesets
 
 <dl>
-<dt>"look at the four selectors, and calculate the specificity weight for each one." (2 marks)</dt>
-<dd>The correct weights for each one are as follows (half a mark each):
+<dt>"look at the four selectors, and calculate the specificity for each one." (2 marks)</dt>
+<dd>The correct specificity for each one is as follows (half a mark each):
   <ul>
     <li>0012</li>
     <li>0011</li>
@@ -48,7 +48,7 @@ The overall mark awarded is out of 35. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##New rulesets you need to write 
+##New rulesets you need to write
 
 <dl>
 <dt>"Write a ruleset that targets both the card header, and card footer..." (3 marks)</dt>
