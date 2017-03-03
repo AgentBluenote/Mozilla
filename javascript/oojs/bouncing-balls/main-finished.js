@@ -31,7 +31,7 @@ Ball.prototype.draw = function() {
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-}
+};
 
 // define ball update method
 
@@ -54,13 +54,13 @@ Ball.prototype.update = function() {
 
   this.x += this.velX;
   this.y += this.velY;
-}
+};
 
 // define ball collision detection
 
 Ball.prototype.collisionDetect = function() {
   for(j = 0; j < balls.length; j++) {
-    if( (!(this.x === balls[j].x && this.y === balls[j].y && this.velX === balls[j].velX && this.velY === balls[j].velY)) ) {
+    if(!(this === balls[j])) {
       var dx = this.x - balls[j].x;
       var dy = this.y - balls[j].y;
       var distance = Math.sqrt(dx * dx + dy * dy);
@@ -70,7 +70,7 @@ Ball.prototype.collisionDetect = function() {
       }
     }
   }
-}
+};
 
 // define array to store balls
 
