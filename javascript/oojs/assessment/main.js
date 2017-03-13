@@ -47,7 +47,7 @@ Ball.prototype.draw = function() {
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-}
+};
 
 // define ball update method
 
@@ -70,7 +70,7 @@ Ball.prototype.update = function() {
 
   this.x += this.velX;
   this.y += this.velY;
-}
+};
 
 // define ball collision detection
 
@@ -86,7 +86,7 @@ Ball.prototype.collisionDetect = function() {
       }
     }
   }
-}
+};
 
 
 
@@ -114,7 +114,7 @@ EvilCircle.prototype.draw = function() {
   ctx.lineWidth = 3;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.stroke();
-}
+};
 
 
 // define EvilCircle checkBounds method
@@ -135,7 +135,7 @@ EvilCircle.prototype.checkBounds = function() {
   if((this.y - this.size) <= 0) {
     this.y += this.size;
   }
-}
+};
 
 // define EvilCircle setControls method
 
@@ -151,8 +151,8 @@ EvilCircle.prototype.setControls = function() {
     } else if(e.keyCode === 83) { // s
       _this.y += _this.velY;
     }
-  }
-}
+  };
+};
 
 // define EvilCircle collision detection
 
@@ -170,7 +170,7 @@ EvilCircle.prototype.collisionDetect = function() {
       }
     }
   }
-}
+};
 
 
 
