@@ -35,7 +35,7 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
 </ul>
 </dd>
 <dt>The two addresses can just be put inside paragraphs; each line of the address should sit on a new line, but not be in a new paragraph. (3 marks)</dt>
-<dd>Wrap both of the addresses in an &lt;p&gt; element, and put a &lt;br&gt; element at the end of each line of the address, except for the last line in each case. Note that it is also acceptable to wrap the address of the letter writer in an &lt;address&gt; element instead of a paragraph, but not the receiver's address.</dd>
+<dd>Wrap both of the addresses in an &lt;p&gt; element, and put a &lt;br&gt; element at the end of each line of the address, except for the last line in each case.</dd>
 </dl>
 
 ##Inline semantics
