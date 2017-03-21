@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NY Times example</title>
+  </head>
+  <body>
+    <h1>NY Times search articles</h1>
+
+    <form>
+      <p>
+        <label for="search">Enter a SINGLE search term (required): </label>
+        <input type="text" id="search" class="search" required>
+      </p>
+      <p>
+        <label for="start-date">Enter a start date (format YYYYMMDD): </label>
+        <input type="date" id="start-date" class="start-date" pattern="[0-9]{8}">
+      </p>
+      <p>
+        <label for="end-date">Enter an end date (format YYYYMMDD): </label>
+        <input type="date" id="end-date" class="end-date" pattern="[0-9]{8}">
+      </p>
+      <p>
+        <button>Submit search</button>
+      </p>
+    </form>
+
+    <nav>
+      <button>Next 10</button>
+      <button>Previous 10</button>
+    </nav>
+
+    <section>
+
+    </section>
+
+    <script>
+
+      var baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
+      var key = '4f3c267e125943d79b0a3e679f608a78';
+
+
+
+    fetch()
+
+    </script>
+
+
+  </body>
+</html>
