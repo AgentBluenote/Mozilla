@@ -1,11 +1,12 @@
-#Marking guide for "Marking up a letter"
+# Marking guide for "Marking up a letter"
+
 The following guide outlines a marking guide for the MDN Learning Area HTML Topic — [Marking up a letter](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or somethign that isn't clearly cut.
 
 The overall mark awarded is out of 47. Work out their final mark, and then divide by 47 and multiply by 100 to give a percentage mark. For reference, you can find a [finished marked up letter](index.html) that would be awarded top marks.
 
-##Block/structural semantics
+## Block/structural semantics
 
 <dl>
 <dt>You should structure the overall document with an appropriate structure including doctype, and &lt;html&gt;, &lt;head&gt; and &lt;body&gt; elements (5 marks)</dt>
@@ -38,7 +39,7 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
 <dd>Wrap both of the addresses in an &lt;p&gt; element, and put a &lt;br&gt; element at the end of each line of the address, except for the last line in each case.</dd>
 </dl>
 
-##Inline semantics
+## Inline semantics
 
 <dl>
 <dt>The names of the sender and receiver (and "Tel" and "Email") should be marked up with strong importance (2 marks, half a mark each)</dt>
@@ -73,7 +74,7 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
 <dd>"Be excellent to each other" should be wrapped in a &lt;q&gt; element, and "Bill S Preston, Esq" should be wrapped in a &lt;cite&gt; element</dd>
 </dl>
 
-##The head of the document
+## The head of the document
 
 <dl>
   <dt>The character set of the document should be specified as utf-8 using an appropriate meta tag (1 mark)</dt>
@@ -84,7 +85,7 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
   <dd>The CSS from the provided CSS file should be pasted inside a &lt;style&gt; element, included inside the &lt;head&gt; element. OR, it would also be acceptable (in fact better) if the student put the CSS inside an external CSS file and linked it via a &lt;link&gt; element.</dd>
 </dl>
 
-##Other tasks
+## Other tasks
 
 <dl>
 <dt>You'll get bonus points if it validates as much as possible (2 marks.)</dt>
