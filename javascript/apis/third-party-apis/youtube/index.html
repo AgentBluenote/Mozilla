@@ -48,7 +48,7 @@
       // It all started
       window.onload = onClientLoad;
 
-      // Load and inialize the API, then run onYouTubeApiLoad
+      // Load and inialize the API, then run the onYouTubeApiLoad() function once this is done
       function onClientLoad() {
         gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
       }
@@ -129,7 +129,7 @@
         });
 
         // The onPlayerReady() handler grabs the ID of each video, and checks its duration
-        // If the duration is 0, the video can't be played, so we just delete it 
+        // If the duration is 0, the video can't be played, so we just delete it
         function onPlayerReady(e) {
           var myId = e.target.a.id;
           var duration = e.target.getDuration();

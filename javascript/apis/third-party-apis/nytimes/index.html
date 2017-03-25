@@ -44,9 +44,13 @@
 
     <script>
 
+      // Defining a baseURL and key to as part of the request URL
+
       var baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
       var key = '4f3c267e125943d79b0a3e679f608a78';
       var url;
+
+      // Grab references to all the DOM elements you'll need to manipulate
 
       var searchTerm = document.querySelector('.search');
       var startDate = document.querySelector('.start-date');
@@ -59,19 +63,25 @@
 
       var section = document.querySelector('section');
       var nav = document.querySelector('nav');
+
+      // Hide the "Previous"/"Next" navigation to begin with, as we don't need it immediately
       nav.style.display = 'none';
 
+      // define the initial page number and status of the navigation being displayed
       var pageNumber = 0;
       var displayNav = false;
 
+      // Event listeners to control the functionality
       searchForm.addEventListener('submit', fetchResults);
-
       nextBtn.addEventListener('click', nextPage);
       previousBtn.addEventListener('click', previousPage);
 
 
       function fetchResults(e) {
+        // Use preventDefault() to stop the form submitting
         e.preventDefault();
+
+        // Assemble the full URL
         url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value;
 
         if(startDate.value !== '') {
@@ -82,6 +92,7 @@
           url += '&end_date=' + endDate.value;
         };
 
+        // Use fetch() to make the request to the API
         fetch(url).then(function(result) {
           return result.json();
         }).then(function(json) {
@@ -156,7 +167,7 @@
         if(pageNumber > 0) {
           pageNumber--;
         } else {
-          pageNumber = 0;
+          return;
         }
         fetchResults(e);
       };
