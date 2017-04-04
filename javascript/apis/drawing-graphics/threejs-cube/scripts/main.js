@@ -17,7 +17,7 @@ document.body.appendChild( renderer.domElement );
 			texture.wrapT = THREE.RepeatWrapping;
 			texture.repeat.set( 2, 2 );
 
-			var geometry = new THREE.BoxGeometry(1.5,1.5,1.5);
+			var geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
 			var material = new THREE.MeshLambertMaterial( { map: texture, shading: THREE.FlatShading } );
 			cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
