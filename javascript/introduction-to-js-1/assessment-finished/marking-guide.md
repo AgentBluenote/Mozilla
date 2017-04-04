@@ -1,11 +1,11 @@
-#Marking guide for "Silly story generator"
+# Marking guide for "Silly story generator"
 The following guide outlines a marking guide for the MDN Learning Area JavaScript Topic — [Silly story generator](https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Silly_story_generator). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 39. Work out their final mark, and then divide by 39 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks. 
+The overall mark awarded is out of 39. Work out their final mark, and then divide by 39 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
 
-##Basic setup
+## Basic setup
 
 <dl>
 <dt>Create <code>main.js</code></dt>
@@ -14,7 +14,7 @@ The overall mark awarded is out of 39. Work out their final mark, and then divid
 <dd>One mark for this too.</dd>
 </dl>
 
-##Initial variables and functions
+## Initial variables and functions
 
 <dl>
 <dt>Copy the code from section 1 of the raw text file into <code>main.js</code>.</dt>
@@ -28,7 +28,7 @@ The overall mark awarded is out of 39. Work out their final mark, and then divid
 ## Placing the event handler and incomplete function
 Only one mark for this bit — it's just more simple copy and paste.
 
-##Completing the result() function
+## Completing the result() function
 
 <dl>
 <dt>Create a new variable called <code>newStory</code>, and set it's value to equal <code>storyText</code>.</dt>
@@ -43,7 +43,7 @@ Only one mark for this bit — it's just more simple copy and paste.
     <li>Four marks for this, 2 for each formula. The two required formulae are <code>pounds x 0.0714286 = stone</code> and <code>(Farenheit - 32) * (5 / 9) = centigrade. </code></li>
     <li>Two marks for this. They need to replace <code>300</code> with <code>300*0.0714286</code>, and then concatenate <code>' stone'</code> onto the end of the whole line, so in total, the value of <code>weight</code> is <code>Math.round(300*0.0714286) + ' stone'</code>.</li>
     <li>Two marks for this. They need to replace <code>94</code> with <code>(94-32) * 5 / 9</code>, and then concatenate <code>' centigrade'</code> onto the end of the whole line, so in total, the value of <code>temperature</code> is <code>Math.round((94-32) * 5 / 9) + ' centigrade'</code>.</li>
-    <li>Four marks in total for these; they are just the same as the other <code>replace()</code> lines that came before them. For these two lines we need <code>newStory = newStory.replace('94 farenheit',temperature);</code> and 
+    <li>Four marks in total for these; they are just the same as the other <code>replace()</code> lines that came before them. For these two lines we need <code>newStory = newStory.replace('94 farenheit',temperature);</code> and
     <code>newStory = newStory.replace('300 pounds',weight);</code></li>
   </ul>
 </dd>
