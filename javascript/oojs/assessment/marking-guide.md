@@ -1,11 +1,12 @@
-#Marking guide for "Adding features to our bouncing balls demo"
+# Marking guide for "Adding features to our bouncing balls demo"
+
 The following guide outlines a marking guide for the "Introducing JavaScript Objects" module assessment, part of the MDN Learning Area JavaScript Topic — see [Adding features to our bouncing balls demo](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
 The overall mark awarded is out of 45. Work out their final mark, and then divide by 45 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
 
-##Creating our new objects
+## Creating our new objects
 
 <dl>
 <dt>The <code>Shape()</code> constructor</dt>
@@ -21,7 +22,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##Defining EvilCircle()
+## Defining EvilCircle()
 
 <dl>
 <dt>Inheritance</dt>
@@ -32,7 +33,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 <dd>One mark for defining <code>EvilCircle.prototype</code> and <code>EvilCircle.prototype.constructor</code> using the same pattern as before.</dd>
 </dl>
 
-##Defining EvilCircle()'s methods
+## Defining EvilCircle()'s methods
 
 <dl>
 <dt>draw()</dt>
@@ -68,7 +69,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##Bringing the evil circle into the program
+## Bringing the evil circle into the program
 
 <dl>
 <dt>Creating an <code>EvilCircle</code> instance, and calling <code>setControls()</code></dt>
@@ -90,7 +91,7 @@ evil.collisionDetect();</pre>
 </dd>
 </dl>
 
-##Bringing the evil circle into the program
+## Bringing the evil circle into the program
 
 <dl>
 <dt>Adding a <code>&lt;p&gt;</code> element</dt>
