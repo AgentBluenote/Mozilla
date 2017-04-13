@@ -75,7 +75,7 @@ Ball.prototype.update = function() {
 // define ball collision detection
 
 Ball.prototype.collisionDetect = function() {
-  for(j = 0; j < balls.length; j++) {
+  for(var j = 0; j < balls.length; j++) {
     if(!(this === balls[j])) {
       var dx = this.x - balls[j].x;
       var dy = this.y - balls[j].y;
@@ -157,7 +157,7 @@ EvilCircle.prototype.setControls = function() {
 // define EvilCircle collision detection
 
 EvilCircle.prototype.collisionDetect = function() {
-  for(j = 0; j < balls.length; j++) {
+  for(var j = 0; j < balls.length; j++) {
     if( balls[j].exists ) {
       var dx = this.x - balls[j].x;
       var dy = this.y - balls[j].y;
@@ -194,7 +194,7 @@ function loop() {
     para.textContent = 'Ball count: ' + count;
   }
 
-  for(i = 0; i < balls.length; i++) {
+  for(var i = 0; i < balls.length; i++) {
     if(balls[i].exists) {
       balls[i].draw();
       balls[i].update();

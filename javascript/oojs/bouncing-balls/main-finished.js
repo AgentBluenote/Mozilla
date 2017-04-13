@@ -59,7 +59,7 @@ Ball.prototype.update = function() {
 // define ball collision detection
 
 Ball.prototype.collisionDetect = function() {
-  for(j = 0; j < balls.length; j++) {
+  for(var j = 0; j < balls.length; j++) {
     if(!(this === balls[j])) {
       var dx = this.x - balls[j].x;
       var dy = this.y - balls[j].y;
@@ -87,7 +87,7 @@ function loop() {
     balls.push(ball);
   }
 
-  for(i = 0; i < balls.length; i++) {
+  for(var i = 0; i < balls.length; i++) {
     balls[i].draw();
     balls[i].update();
     balls[i].collisionDetect();
