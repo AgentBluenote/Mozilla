@@ -31,7 +31,7 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
 <dd>This is fairly simple. Looking at the different lists and their context/usage, the reader should know to:
 <ul>
   <li>Mark up the semester start dates as an unordered list (&lt;ul&gt;/&lt;li&gt;), or arguably an ordered list (&lt;ol&gt;/&lt;li&gt;) — either is ok (2 marks)</li>
-  <li>Mark up the study subjects as an ordered list (&lt;ul&gt;/&lt;li&gt;) (2 marks)</li>
+  <li>Mark up the study subjects as an ordered list (&lt;ol&gt;/&lt;li&gt;) (2 marks)</li>
   <li>Mark up the exotic dances as a description list (&lt;dl&gt;/&lt;dd&gt;/&lt;dt&gt;) (2 marks)</li>
 </ul>
 </dd>
