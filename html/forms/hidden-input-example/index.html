@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>&lt;input type="hidden"&gt; example</title>
+  <style>
+
+    form {
+      width: 500px;
+    }
+
+    div {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    label {
+      flex: 2;
+    }
+
+    input, textarea {
+      flex: 7;
+    }
+
+    textarea {
+      height: 60px;
+    }
+
+  </style>
+</head>
+<body>
+  <form>
+    <div>
+      <label for="title">Post title:</label>
+      <input type="text" id="title" name="title" value="My excellent blog post">
+    </div>
+    <div>
+      <label for="content">Post content:</label>
+      <textarea id="content" name="content">
+This is the content of my excellent blog post. I hope you enjoy it!
+      </textarea>
+    </div>
+    <div>
+      <button type="submit">Update post</button>
+    </div>
+    <input type="hidden" id="postId" name="postId" value="34657">
+  </form>
+</body>
