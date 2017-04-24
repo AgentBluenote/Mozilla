@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>date control with fallback</title>
+  <title>datetime-local control with fallback</title>
   <style>
+    div {
+      margin-bottom: 10px;
+    }
+
     input:invalid+span:after {
       content: '✖';
       padding-left: 5px;
@@ -19,13 +23,14 @@
 
 <body>
   <form>
-      <div class="nativeDatePicker">
-        <label for="bday">Enter your birthday:</label>
-        <input type="date" id="bday" name="bday">
-        <span class="validity"></span>
-      </div>
-      <p class="fallbackLabel">Enter your birthday:</p>
-      <div class="fallbackDatePicker">
+    <div class="nativeDateTimePicker">
+      <label for="party">Choose a date and time for your party:</label>
+      <input type="datetime-local" id="party" name="bday">
+      <span class="validity"></span>
+    </div>
+    <p class="fallbackLabel">Choose a date and time for your party:</p>
+    <div class="fallbackDateTimePicker">
+      <div>
         <span>
           <label for="day">Day:</label>
           <select id="day" name="day">
@@ -54,17 +59,32 @@
           </select>
         </span>
       </div>
+      <div>
+        <span>
+          <label for="hour">Hour:</label>
+          <select id="hour" name="hour">
+          </select>
+        </span>
+        <span>
+          <label for="minute">Minute:</label>
+          <select id="minute" name="minute">
+          </select>
+        </span>
+      </div>
+    </div>
   </form>
 
   <script>
 // define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
+var nativePicker = document.querySelector('.nativeDateTimePicker');
+var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
 
 var yearSelect = document.querySelector('#year');
 var monthSelect = document.querySelector('#month');
 var daySelect = document.querySelector('#day');
+var hourSelect = document.querySelector('#hour');
+var minuteSelect = document.querySelector('#minute');
 
 // hide fallback initially
 fallbackPicker.style.display = 'none';
@@ -84,6 +104,8 @@ if(test.type === 'text') {
   // (the months are always the same, therefore hardcoded)
   populateDays(monthSelect.value);
   populateYears();
+  populateHours();
+  populateMinutes();
 }
 
 function populateDays(month) {
@@ -148,6 +170,24 @@ function populateYears() {
     var option = document.createElement('option');
     option.textContent = year-i;
     yearSelect.appendChild(option);
+  }
+}
+
+function populateHours() {
+  // populate the hours <select> with the 24 hours of the day
+  for(var i = 0; i <= 23; i++) {
+    var option = document.createElement('option');
+    option.textContent = (i < 10) ? ("0" + i) : i;
+    hourSelect.appendChild(option);
+  }
+}
+
+function populateMinutes() {
+  // populate the minutes <select> with the 60 hours of each minute
+  for(var i = 0; i <= 59; i++) {
+    var option = document.createElement('option');
+    option.textContent = (i < 10) ? ("0" + i) : i;
+    minuteSelect.appendChild(option);
   }
 }
 
