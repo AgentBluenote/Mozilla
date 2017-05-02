@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 @font-face {
     font-family: 'HeydingsControlsRegular';
     src: url('fonts/heydings_controls-webfont.eot');
