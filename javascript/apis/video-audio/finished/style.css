@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
     font-family: 'HeydingsControlsRegular';
     src: url('fonts/heydings_controls-webfont.eot');
     src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
@@ -10,6 +10,11 @@
 
 video {
   border: 1px solid black;
+}
+
+p {
+  position: absolute;
+  top: 310px;
 }
 
 .player {
