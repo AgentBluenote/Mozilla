@@ -51,7 +51,7 @@
     list.appendChild(listItem);
 
     listBtn.onclick = function(e) {
-      e.target.parentNode.parentNode.removeChild(listItem);
+      list.removeChild(listItem);
     }
 
     input.focus();
