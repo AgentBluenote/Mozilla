@@ -1,11 +1,11 @@
-#Marking guide for "Creating fancy letterheaded paper"
+# Marking guide for "Creating fancy letterheaded paper"
 The following guide outlines a marking guide for the MDN Learning Area CSS assessment — [Creating fancy letterheaded paper](https://developer.mozilla.org/en-US/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 19. Work out their final mark, and then divide by 19 and multiply by 100 to give a percentage mark. For reference, you can find a [finished styled letterhead](index.html) that would be awarded top marks. 
+The overall mark awarded is out of 19. Work out their final mark, and then divide by 19 and multiply by 100 to give a percentage mark. For reference, you can find a [finished styled letterhead](index.html) that would be awarded top marks.
 
-##The main letter
+## The main letter
 
 <dl>
 <dt>"Apply the CSS to the HTML." (1 mark)</dt>
@@ -28,7 +28,7 @@ The overall mark awarded is out of 19. Work out their final mark, and then divid
 <dd>Two marks for an appropriate <code>border-top</code> and <code>border-bottom</code> declaration (one for each), and one mark for choosing an appropriate color to go with the top and bottom graphics (e.g. a red or brown for the default provided options).</dd>
 </dl>
 
-##The logo
+## The logo
 
 <dl>
 <dt>"To the <code>&lt;h1&gt;</code>, add the logo as a background image." (1 mark)</dt>
@@ -46,4 +46,3 @@ The overall mark awarded is out of 19. Work out their final mark, and then divid
 
 
 </dl>
-

@@ -1,18 +1,18 @@
-#Marking guide for "A cool looking box"
+# Marking guide for "A cool looking box"
 The following guide outlines a marking guide for the MDN Learning Area CSS assessment — [A cool looking box](https://developer.mozilla.org/en-US/Learn/CSS/Styling_boxes/A_cool_looking_box). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 22. Work out their final mark, and then divide by 22 and multiply by 100 to give a percentage mark. For reference, you can find a [finished styled box](index.html) that would be awarded top marks. 
+The overall mark awarded is out of 22. Work out their final mark, and then divide by 22 and multiply by 100 to give a percentage mark. For reference, you can find a [finished styled box](index.html) that would be awarded top marks.
 
-##General tasks
+## General tasks
 
 <dl>
 <dt>"Apply the CSS to the HTML." (1 mark)</dt>
 <dd>One mark for creating a suitable <code>&ltlink&gt;</code> element, or <code>&lt;style&gt;</code> element to apply the CSS with.</dd>
 </dl>
 
-##Styling the box
+## Styling the box
 
 <dl>
 <dt>"A reasonable width for a large button." (1 mark)</dt>

@@ -14,7 +14,7 @@
 
   <input class="numberInput" type="text">
   <p></p>
-  
+
   <script>
     var input = document.querySelector('.numberInput');
     var para = document.querySelector('p');
@@ -30,12 +30,12 @@
     function factorial(num) {
       var x = num;
       while(x > 1) {
-        num *= x-1; 
+        num *= x-1;
         x--;
       }
 
       return num;
-    } 
+    }
 
     input.onchange = function() {
       var num = input.value;
@@ -46,7 +46,7 @@
                            num + ' cubed is ' + cubed(num) + '. ' +
                            num + ' factorial is ' + factorial(num) + '.';
       }
-    } 
+    }
 
   </script>
 </body>
