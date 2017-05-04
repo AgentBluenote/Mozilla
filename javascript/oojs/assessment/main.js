@@ -20,21 +20,21 @@ function random(min,max) {
 
 // define shape constructor
 
-function Shape() {
-  this.x = random(0,width);
-  this.y = random(0,height);
-  this.velX = random(-7,7);
-  this.velY = random(-7,7);
-  this.exists = true;
+function Shape(x, y, velX, velY, exists) {
+  this.x = x;
+  this.y = y;
+  this.velX = velX;
+  this.velY = velY;
+  this.exists = exists;
 }
 
 // define Ball constructor, inheriting from Shape
 
-function Ball() {
-  Shape.call(this);
+function Ball(x, y, velX, velY, exists, color, size) {
+  Shape.call(this, x, y, velX, velY, exists);
 
-  this.color = 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')';
-  this.size = random(10,20);
+  this.color = color;
+  this.size = size;
 }
 
 Ball.prototype = Object.create(Shape.prototype);
@@ -93,8 +93,8 @@ Ball.prototype.collisionDetect = function() {
 
 // define EvilCircle constructor, inheriting from Shape
 
-function EvilCircle() {
-  Shape.call(this);
+function EvilCircle(x, y, exists) {
+  Shape.call(this, x, y, exists);
 
   this.color = 'white';
   this.size = 10;
@@ -180,7 +180,7 @@ var balls = [];
 
 // define loop that keeps drawing the scene constantly
 
-var evil = new EvilCircle();
+var evil = new EvilCircle(random(0,width), random(0,height), true);
 evil.setControls();
 
 function loop() {
@@ -188,7 +188,15 @@ function loop() {
   ctx.fillRect(0,0,width,height);
 
   while(balls.length < 25) {
-    var ball = new Ball();
+    var ball = new Ball(
+      random(0,width),
+      random(0,height),
+      random(-7,7),
+      random(-7,7),
+      true,
+      'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+      random(10,20)
+    );
     balls.push(ball);
     count++;
     para.textContent = 'Ball count: ' + count;

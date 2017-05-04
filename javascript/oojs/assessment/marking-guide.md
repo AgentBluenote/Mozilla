@@ -10,11 +10,11 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 
 <dl>
 <dt>The <code>Shape()</code> constructor</dt>
-<dd>Three marks for this — creating this constructor is not difficult — you just need to copy the first four property definitions out of the original <code>Ball()</code> constructor, then add the extra <code>exists</code> property.</dd>
+<dd>Three marks for this — creating this constructor is not difficult — you just need to copy the original <code>Ball()</code> constructor, remove the <code>color</code> and <code>size</code> definitions, then add the extra <code>exists</code> property/parameter.</dd>
 <dt>The <code>Ball()</code> constructor</dt>
 <dd>eight marks for this in total, as it is a bit more complex:
   <ul>
-    <li>Two marks for using <code>Shape.call(this)</code> to inherit the <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> properties from Shape().</li>
+    <li>Two marks for using <code>Shape.call(this, x, y, velX, velY, exists)</code> to inherit the <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> properties from Shape().</li>
     <li>Two marks for including those properties as parameters in the constructor (it won't work without it).</li>
     <li>Two marks for creating non-inherited <code>color</code> and <code>size</code> property definitions, which should be the same as the ones in the original <code>Ball()</code> constructor.</li>
     <li>Two marks for defining <code>Ball.prototype</code> and <code>Ball.prototype.constructor</code> correctly, according to the technique in our <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#Setting_Teacher()%27s_prototype_and_constructor_reference">inheritance article</a>.</li>
@@ -26,7 +26,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 
 <dl>
 <dt>Inheritance</dt>
-<dd>One mark for using <code>shape.call(this)</code> to inherit the <code>x</code>, <code>y</code>, and <code>exists</code> properties. One mark for specifying them as parameters in the constructor.</dd>
+<dd>One mark for using <code>shape.call(this, x, y, exists)</code> to inherit the <code>x</code>, <code>y</code>, and <code>exists</code> properties. One mark for specifying them as parameters in the constructor.</dd>
 <dt>Specifying new properties</dt>
 <dd>Two marks for specifying the four new required properties.</dd>
 <dt>Prototype and constructor</dt>
@@ -73,16 +73,16 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 
 <dl>
 <dt>Creating an <code>EvilCircle</code> instance, and calling <code>setControls()</code></dt>
-<dd>Three marks for this — you just need to create a new instance of the <code>EvilCircle</code>, for example:
-<pre>var evil = new EvilCircle();
+<dd>Three marks for this — you need to create a new instance of the <code>EvilCircle</code>, for example:
+<pre>var evil = new EvilCircle(random(0,width), random(0,height), true);
 </pre>
 and then call its <code>setControls()</code> method:
 <pre>evil.setControls()</pre>
-These lines must be included in a way that they only run once, not with every loop iteration. The easiest way to do this is to just include the lines outside the loop function definiton, before <code>loop()</code> is called.</dd>
+These lines must be included in a way that they only run once, not with every loop iteration. The easiest way to do this is to just include the lines outside the loop function definition, before <code>loop()</code> is called.</dd>
 <dt>make it so that the ball functions are only called inside the loop if the current ball exists</dt>
 <dd>Two marks for this — you simply need to wrap the three <code>ball[i]</code> function calls inside the for loop inside <code>if(balls[i].exists) { ... }</code>.</dd>
 <dt>Call the evil ball instance's <code>draw()</code>, <code>checkBounds()</code>, and <code>collisionDetect()</code> methods...</dt>
-<dd>Twio marks for this; you just need to include the folowing lines inside the <code>loop()</code>, just before the <code>requestAnimationFrame()</code> line:
+<dd>Two marks for this; you just need to include the folowing lines inside the <code>loop()</code>, just before the <code>requestAnimationFrame()</code> line:
 
 <pre>evil.draw();
 evil.checkBounds();
@@ -91,7 +91,7 @@ evil.collisionDetect();</pre>
 </dd>
 </dl>
 
-## Bringing the evil circle into the program
+## Implementing the score counter
 
 <dl>
 <dt>Adding a <code>&lt;p&gt;</code> element</dt>
