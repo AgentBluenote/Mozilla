@@ -30,8 +30,8 @@ function Shape() {
 
 // define Ball constructor, inheriting from Shape
 
-function Ball(x, y, velX, velY, exists) {
-  Shape.call(this, x, y, velX, velY, exists);
+function Ball() {
+  Shape.call(this);
 
   this.color = 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')';
   this.size = random(10,20);
@@ -93,8 +93,8 @@ Ball.prototype.collisionDetect = function() {
 
 // define EvilCircle constructor, inheriting from Shape
 
-function EvilCircle(x, y, exists) {
-  Shape.call(this, x, y, exists);
+function EvilCircle() {
+  Shape.call(this);
 
   this.color = 'white';
   this.size = 10;

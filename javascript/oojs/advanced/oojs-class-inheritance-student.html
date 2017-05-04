@@ -42,7 +42,7 @@
         // define a variable that will contain the pronoun part of
         // the sencond sentence
         var pronoun;
-        
+
         // check what the value of gender is, and set pronoun
         // to an appropriate value in each case
         if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
@@ -52,7 +52,7 @@
         } else {
           pronoun = 'They like ';
         }
-        
+
         // add the pronoun string on to the end of the main string
         string += pronoun;
 
@@ -66,7 +66,7 @@
         } else {
           // if there are more than 2 interests, we loop through them
           // all, adding each one to the main string followed by a comma,
-          // except for the last one, which needs an and & a full stop 
+          // except for the last one, which needs an and & a full stop
           for(var i = 0; i < this.interests.length; i++) {
             if(i === this.interests.length - 1) {
               string += 'and ' + this.interests[i] + '.';

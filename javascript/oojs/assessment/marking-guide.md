@@ -14,8 +14,8 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 <dt>The <code>Ball()</code> constructor</dt>
 <dd>eight marks for this in total, as it is a bit more complex:
   <ul>
-    <li>Two marks for using <code>Shape.call()</code> to define the inherited <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> properties.</li>
-    <li>Two marks for also including those properties as parameters in the constructor (it won't work without it).</li>
+    <li>Two marks for using <code>Shape.call(this)</code> to inherit the <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> properties from Shape().</li>
+    <li>Two marks for including those properties as parameters in the constructor (it won't work without it).</li>
     <li>Two marks for creating non-inherited <code>color</code> and <code>size</code> property definitions, which should be the same as the ones in the original <code>Ball()</code> constructor.</li>
     <li>Two marks for defining <code>Ball.prototype</code> and <code>Ball.prototype.constructor</code> correctly, according to the technique in our <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#Setting_Teacher()%27s_prototype_and_constructor_reference">inheritance article</a>.</li>
   </ul>
@@ -26,7 +26,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 
 <dl>
 <dt>Inheritance</dt>
-<dd>Two marks for using <code>shape.call()</code> to inherit <code>x</code>, <code>y</code>, and <code>exists</code>, and specifying them as parameters in the constructor.</dd>
+<dd>One mark for using <code>shape.call(this)</code> to inherit the <code>x</code>, <code>y</code>, and <code>exists</code> properties. One mark for specifying them as parameters in the constructor.</dd>
 <dt>Specifying new properties</dt>
 <dd>Two marks for specifying the four new required properties.</dd>
 <dt>Prototype and constructor</dt>
@@ -63,7 +63,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 <dt>collisionDetect()</dt>
 <dd>Two marks for this. After copying the <code>Ball.prototype.collisionDetect</code> definition and changing <code>Ball</code> to <code>EvilCircle</code>, you need to:
   <ul>
-    <li>Change the test inside the outer <code>if()</code> statement's parentheses to <code>balls[j].exists</code> — you basically need to chek whether the current ball's <code>exists</code> proerty is <code>true</code>. (1 mark).</li>
+    <li>Change the test inside the outer <code>if()</code> statement's parentheses to <code>balls[j].exists</code> — you basically need to check whether the current ball's <code>exists</code> proerty is <code>true</code>. (1 mark).</li>
     <li>Change the code inside the inner <code>if()</code> statement's curly braces to <code>balls[j].exists = false;</code> — if a ball gets hit by the evil circle, it will stop existing (1 mark).</li>
   </ul>
 </dd>
