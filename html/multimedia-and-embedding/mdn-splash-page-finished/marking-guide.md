@@ -1,11 +1,11 @@
-#Marking guide for "Mozilla splash page"
+# Marking guide for "Mozilla splash page"
 The following article outlines a marking guide for the MDN Learning Area HTML Assessment — [Mozilla splash page](https://developer.mozilla.org/en-US/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clearly cut.
 
-The overall mark awarded is out of 28. Work out their final mark, and then divide by 28 and multiply by 100 to give a percentage mark. For reference, you can find a [finished splash page](index.html) that would be awarded top marks. 
+The overall mark awarded is out of 28. Work out their final mark, and then divide by 28 and multiply by 100 to give a percentage mark. For reference, you can find a [finished splash page](index.html) that would be awarded top marks.
 
-##Preparing images
+## Preparing images
 
 <dl>
 <dt>A total of 6 marks should be awarded for this section</dt>
@@ -20,7 +20,7 @@ The overall mark awarded is out of 28. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##Adding a logo to the header
+## Adding a logo to the header
 
 <dl>
 <dt>A total of 2 marks should be awarded for this section</dt>
@@ -31,7 +31,7 @@ The overall mark awarded is out of 28. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##Adding a video to the main article content
+## Adding a video to the main article content
 
 <dl>
 <dt>A total of 2 marks should be awarded for this section</dt>
@@ -42,7 +42,7 @@ The overall mark awarded is out of 28. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##Adding responsive images to the further info links
+## Adding responsive images to the further info links
 
 <dl>
 <dt>A total of 14 marks should be awarded for this section</dt>
@@ -60,7 +60,7 @@ The overall mark awarded is out of 28. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##An art directed red panda
+## An art directed red panda
 
 <dl>
 <dt>A total of 5 marks should be awarded for this section</dt>
@@ -71,4 +71,3 @@ The overall mark awarded is out of 28. Work out their final mark, and then divid
 </ul>
 </dd>
 </dl>
-

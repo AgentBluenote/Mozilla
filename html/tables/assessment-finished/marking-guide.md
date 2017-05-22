@@ -1,11 +1,11 @@
-#Marking guide for "Structuring planet data"
+# Marking guide for "Structuring planet data"
 The following guide outlines a marking guide for the MDN Learning Area HTML Topic — [Structuring planet data](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Structuring_planet_data). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clearly cut.
 
 The overall mark awarded is out of 34. Work out their final mark, and then divide by 34 and multiply by 100 to give a percentage mark. For reference, you can find a [finished marked up page](planets-data.html) that would be awarded top marks.
 
-##Block/structural semantics
+## Block/structural semantics
 
 <dl>
   <dt>Giving the table a basic high level structure — an outer container, a table header, and a table body (3 marks.)</dt>
