@@ -160,7 +160,7 @@ function setTabHandler(tab, tabPos) {
     tab.className = 'active';
 
     for(i = 0; i < panels.length; i++) {
-      panels.className = '';
+      panels[i].className = '';
     }
 
     panels[tabPos].className = 'active-panel';
