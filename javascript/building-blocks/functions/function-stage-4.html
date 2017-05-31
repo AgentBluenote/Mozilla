@@ -63,7 +63,7 @@
         panel.appendChild(closeBtn);
 
         closeBtn.onclick = function() {
-          html.removeChild(panel);
+          panel.parentNode.removeChild(panel);
         }
 
         if(msgType === 'warning') {
@@ -76,7 +76,7 @@
           msg.style.paddingLeft = '20px';
         }
       }
-      
+
     </script>
   </body>
 </html>
