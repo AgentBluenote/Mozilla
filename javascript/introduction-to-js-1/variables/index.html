@@ -54,8 +54,7 @@
     </style>
   </head>
   <body>
-
-  <script>
+<script>
     var geval = eval;
     function createInput() {
       var inputDiv = document.createElement('div');
@@ -67,6 +66,10 @@
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
+
+      if(document.querySelectorAll('div').length > 1) {
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }
@@ -91,10 +94,9 @@
 
       createInput()
     }
-    
+
     createInput();
 
   </script>
-    
   </body>
 </html>
