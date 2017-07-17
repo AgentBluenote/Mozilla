@@ -1,11 +1,11 @@
-#Marking guide for "Image gallery"
+# Marking guide for "Image gallery"
 The following guide outlines a marking guide for the MDN Learning Area JavaScript Topic — [Image gallery](https://developer.mozilla.org/en-US/Learn/JavaScript/Building_blocks/Image_gallery). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 27. Work out their final mark, and then divide by 27 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks. 
+The overall mark awarded is out of 27. Work out their final mark, and then divide by 27 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
 
-##Looping through the images
+## Looping through the images
 
 <dl>
 <dt>Creating the loop</dt>
@@ -19,7 +19,7 @@ The overall mark awarded is out of 27. Work out their final mark, and then divid
 <dd>Three marks for this. The student basically just needs to replace the <code>xxx</code> placeholder with a string concatenation that will use the initializer to build the image path in each case. The pattern we need is this: <code>'images/pic' + i + '.jpg'</code>.</dd>
 </dl>
 
-##Adding an onclick handler to each thumbnail image
+## Adding an onclick handler to each thumbnail image
 
 <dl>
 <dt>Find the value of the src attribute of the current image.</dt>
@@ -35,7 +35,7 @@ newImage.onclick = function(e) {
   var imgSrc = e.target.getAttribute('src');
     ...
 }
-</pre> 
+</pre>
 </dd>
 <dt>Run a function, passing it the returned <code>src</code> value as a parameter.</dt>
 <dd>Two marks for this. To run the function, you need to do something like this: <code>displayImage(imgSrc);</code></dd>
@@ -61,7 +61,7 @@ if(btnClass === 'dark') {
 Then the student needs to grab the three lines provided in the assessment text, and modify it to set the things that are needed in each state. So a finished event handler could look something like this:
 <pre>
 btn.onclick = function() {
-  var btnClass = btn.getAttribute('class'); 
+  var btnClass = btn.getAttribute('class');
   if(btnClass === 'dark') {
     btn.setAttribute('class','light');
     btn.textContent = 'Lighten';
@@ -75,4 +75,3 @@ btn.onclick = function() {
 </pre>
 </dd>
 </dl>
-
