@@ -17,18 +17,18 @@
     <h1>Fetch basic example</h1>
 
     <img src="" class="my-image" alt="A flower">
-  </body>
-  <script src="es6-promise.js"></script>
-  <script src="fetch.js"></script>
-  <script>
-    var myImage = document.querySelector('.my-image');
 
-    fetch('flowers.jpg').then(function(response) {
-      response.blob().then(function(myBlob) {
-        var objectURL = URL.createObjectURL(myBlob);
-        myImage.src = objectURL;
+    <script src="es6-promise.js"></script>
+    <script src="fetch.js"></script>
+    <script>
+      var myImage = document.querySelector('.my-image');
+
+      fetch('flowers.jpg').then(function(response) {
+        response.blob().then(function(myBlob) {
+          var objectURL = URL.createObjectURL(myBlob);
+          myImage.src = objectURL;
+        });
       });
-    });
-
-  </script>
+    </script>
+  </body>
 </html>
