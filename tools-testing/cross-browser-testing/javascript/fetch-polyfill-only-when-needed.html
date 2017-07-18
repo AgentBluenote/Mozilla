@@ -17,39 +17,40 @@
     <h1>Fetch basic example</h1>
 
     <img src="" class="my-image" alt="A flower">
-  </body>
-  <script>
-    if (browserSupportsAllFeatures()) {
-      main();
-    } else {
-      loadScript('polyfills.js', main);
-    }
 
-    function main(err) {
-      var myImage = document.querySelector('.my-image');
+    <script>
+      if (browserSupportsAllFeatures()) {
+        main();
+      } else {
+        loadScript('polyfills.js', main);
+      }
 
-      fetch('flowers.jpg').then(function(response) {
-        response.blob().then(function(myBlob) {
-          var objectURL = URL.createObjectURL(myBlob);
-          myImage.src = objectURL;
+      function main(err) {
+        var myImage = document.querySelector('.my-image');
+
+        fetch('flowers.jpg').then(function(response) {
+          response.blob().then(function(myBlob) {
+            var objectURL = URL.createObjectURL(myBlob);
+            myImage.src = objectURL;
+          });
         });
-      });
-    }
+      }
 
-    function browserSupportsAllFeatures() {
-      return window.Promise && window.fetch;
-    }
+      function browserSupportsAllFeatures() {
+        return window.Promise && window.fetch;
+      }
 
-    function loadScript(src, done) {
-      var js = document.createElement('script');
-      js.src = src;
-      js.onload = function() {
-        done();
-      };
-      js.onerror = function() {
-        done(new Error('Failed to load script ' + src));
-      };
-      document.head.appendChild(js);
-    }
-  </script>
+      function loadScript(src, done) {
+        var js = document.createElement('script');
+        js.src = src;
+        js.onload = function() {
+          done();
+        };
+        js.onerror = function() {
+          done(new Error('Failed to load script ' + src));
+        };
+        document.head.appendChild(js);
+      }
+    </script>
+  </body>
 </html>
