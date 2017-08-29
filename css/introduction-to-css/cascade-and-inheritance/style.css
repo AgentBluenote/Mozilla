@@ -45,17 +45,17 @@ hr {
   color: white;
 }
 
-/* specificity: 0115; */
+/* specificity: 0124; */
 #weight div div li:nth-child(2) a:hover {
   border: 10px solid black;
 }
 
-/* specificity: 0114; */
+/* specificity: 0123; */
 #weight div li:nth-child(2) a:hover {
   border: 10px dashed black;
 }
 
-/* specificity: 0124; */
+/* specificity: 0133; */
 #weight div div .nav:nth-child(2) a:hover {
   border: 10px double black;
 }
