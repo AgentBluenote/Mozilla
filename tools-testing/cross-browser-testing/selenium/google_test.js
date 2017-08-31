@@ -6,9 +6,14 @@ var driver = new webdriver.Builder()
     .forBrowser('firefox')
     .build();
 
-driver.get('http://www.google.com');
+driver.get('https://www.google.com');
 driver.findElement(By.name('q')).sendKeys('webdriver');
-driver.findElement(By.name('btnG')).click();
+
+driver.sleep(1000).then(function() {
+  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+});
+
+driver.findElement(By.name('btnK')).click();
 
 driver.sleep(2000).then(function() {
   driver.getTitle().then(function(title) {

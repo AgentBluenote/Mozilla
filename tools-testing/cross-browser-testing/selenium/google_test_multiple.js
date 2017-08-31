@@ -10,18 +10,18 @@ var driver_chr = new webdriver.Builder()
     .forBrowser('chrome')
     .build();
 
-var driver_saf = new webdriver.Builder()
-    .forBrowser('safari')
-    .build();
-
 searchTest(driver_fx);
 searchTest(driver_chr);
-searchTest(driver_saf);
 
 function searchTest(driver) {
-  driver.get('http://www.google.com');
+  driver.get('https://www.google.com');
   driver.findElement(By.name('q')).sendKeys('webdriver');
-  driver.findElement(By.name('btnG')).click();
+
+  driver.sleep(1000).then(function() {
+    driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+  });
+
+  driver.findElement(By.name('btnK')).click();
 
   driver.sleep(2000).then(function() {
     driver.getTitle().then(function(title) {
