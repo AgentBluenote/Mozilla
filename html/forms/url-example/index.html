@@ -32,8 +32,16 @@
   <body>
     <form>
       <div>
-        <label for="myURL">Enter your website address:</label>
-        <input id="myURL" name="url" type="url">
+        <label for="myURL">Enter the problem website address:</label>
+        <input id="myURL" name="myURL" type="url"
+               required pattern=".*\.myco\..*"
+               title="URL should be in a myco domain">
+        <span class="validity"></span>
+      </div>
+      <div>
+        <label for="myComment">What is the problem?</label>
+        <input id="myComment" name="myComment" type="text"
+               required>
         <span class="validity"></span>
       </div>
       <div>
