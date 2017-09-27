@@ -10,7 +10,7 @@ The overall mark awarded is out of 30. Work out their final mark, and then divid
 
 <dl>
 <dt>The header (4 marks.)</dt>
-<dd>They need to wrap the &lt;h1&gt;, first &lt;img&gt; and whole of the &lt;ul&gt; in a &lt;heading&gt; element.</dd>
+<dd>They need to wrap the &lt;h1&gt;, first &lt;img&gt; and whole of the &lt;ul&gt; in a &lt;header&gt; element.</dd>
 <dt>The navigation menu (4 marks.)</dt>
 <dd>They need to wrap the &lt;ul&gt; in a &lt;nav&gt; element.</dd>
 <dt>The main content (4 marks.)</dt>
