@@ -1,11 +1,12 @@
-#Marking guide for "Typesetting a community school homepage"
+# Marking guide for "Typesetting a community school homepage"
+
 The following guide outlines a marking guide for the MDN Learning Area HTML Topic — [Typesetting a community school homepage](https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension). Each subtask detailed in the assessment is listed below, along with an explanation of how many marks the task is worth, and the mark breakdown.
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 40. Work out their final mark, and then divide by 40 and multiply by 100 to give a percentage mark. For reference, you can find a [finished typeset homepage](index.html) that would be awarded top marks. 
+The overall mark awarded is out of 40. Work out their final mark, and then divide by 40 and multiply by 100 to give a percentage mark. For reference, you can find a [finished typeset homepage](index.html) that would be awarded top marks.
 
-##Fonts
+## Fonts
 
 <dl>
 <dt>"download a couple of free-to-use fonts" (3 marks)</dt>
@@ -16,7 +17,7 @@ The overall mark awarded is out of 40. Work out their final mark, and then divid
 <dd>The body font should be applied to the <code>&lt;html&gt;</code> element, and the heading font should be applied only to <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code>. One mark for each. Also, one bonus mark for providing something of a fallback for each in a font stack, and not just a single font.</dd>
 </dl>
 
-##General text styling
+## General text styling
 
 <dl>
 <dt>"Give the page a site-wide <code>font-size</code> of 10px" (1 mark)</dt>
@@ -35,7 +36,7 @@ The overall mark awarded is out of 40. Work out their final mark, and then divid
 <dd>A good little test of selector and background knowledge. The selector should be <code>h2 + p</code>, and the declaration used should be <code>text-indent: 20px;</code>. One mark for each.</dd>
 </dl>
 
-##Links
+## Links
 
 <dl>
 <dt>"Give the link, visited, focus, and hover states some colors that go with the color of the horizontal bars at the top and bottom of the page." (3 marks)</dt>
@@ -57,7 +58,7 @@ The overall mark awarded is out of 40. Work out their final mark, and then divid
 </dd>
 </dl>
 
-##Lists
+## Lists
 
 <dl>
 <dt>"Make sure the spacing of your lists and list items works well with the styling of the overall page." (1 mark)</dt>
@@ -66,7 +67,7 @@ The overall mark awarded is out of 40. Work out their final mark, and then divid
 <dd>This is really up to the student: they can give <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> a simple <code>list-style-type</code> or something a bit more interesting; whatever they feel like.</dd>
 </dl>
 
-##Navigation menu
+## Navigation menu
 
 <dl>
 <dt>"Style your navigation menu so that it has an appropriate look for the look and feel for the page." (8 marks)</dt>
