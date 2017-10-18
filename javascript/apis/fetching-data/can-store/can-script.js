@@ -128,7 +128,7 @@ function initialize() {
 
     // if no products match the search term, display a "No results to display" message
     if(finalGroup.length === 0) {
-      var para = document.querySelector('p');
+      var para = document.createElement('p');
       para.textContent = 'No results to display!';
       main.appendChild(para);
     // for each product we want to display, pass its product object to fetchBlob()
