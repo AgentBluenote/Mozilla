@@ -79,7 +79,7 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
 <dl>
   <dt>The character set of the document should be specified as utf-8 using an appropriate meta tag (1 mark)</dt>
   <dd>The answer should be &lt;meta charset="utf-8"&gt; or equivalent, included inside the &lt;head&gt; element.</dd>
-  <dt>The author of the letter should be specified in an appropriate meta tag (1 mark)</dt>
+  <dt>The author/coder/content creator of the letter should be specified in an appropriate meta tag (1 mark)</dt>
   <dd>The answer should be something like &lt;meta name="author" content="Dr. Eleanor Gaye"&gt;, included inside the &lt;head&gt; element.</dd>
   <dt>The provided CSS should be included inside an appropriate tag (2 marks)</dt>
   <dd>The CSS from the provided CSS file should be pasted inside a &lt;style&gt; element, included inside the &lt;head&gt; element. OR, it would also be acceptable (in fact better) if the student put the CSS inside an external CSS file and linked it via a &lt;link&gt; element.</dd>
