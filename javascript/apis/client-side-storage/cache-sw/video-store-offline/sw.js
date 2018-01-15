@@ -2,9 +2,10 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
-       '/index.html',
-       '/index.js',
-       '/style.css'
+       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
+       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
+       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
+       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
      ]);
    })
  );
