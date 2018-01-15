@@ -21,11 +21,8 @@ window.onload = function() {
       request.onsuccess = function() {
         // If the result exists/is not undefined
         if(request.result) {
-          // Blobs are stored in the IDB, so need to create object URLs out of these
-          let mp4 = URL.createObjectURL(request.result.mp4);
-          let webm = URL.createObjectURL(request.result.webm);
-
-          displayVideo(mp4, webm, request.result.name);
+          console.log('taking videos from IDB');
+          displayVideo(request.result.mp4, request.result.webm, request.result.name);
         } else {
           fetchVideoFromNetwork(videos[i]);
         }
@@ -35,6 +32,7 @@ window.onload = function() {
 
   // Define the fetchVideoFromNetwork() function
   function fetchVideoFromNetwork(video) {
+    console.log('fetching videos from network');
     // Fetch the MP4 and WebM version of the video using fetch() function
     let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =>
       response.blob()
@@ -71,6 +69,10 @@ window.onload = function() {
 
   // Define the displayVideo() function
   function displayVideo(mp4Blob, webmBlob, title) {
+    // Create object URLs out of the blobs
+    let mp4URL = URL.createObjectURL(mp4Blob);
+    let webmURL = URL.createObjectURL(webmBlob);
+
     // Create DOM elements to embed video in the page
     let article = document.createElement('article');
     let h2 = document.createElement('h2');
@@ -78,10 +80,10 @@ window.onload = function() {
     let video = document.createElement('video');
     video.controls = true;
     let source1 = document.createElement('source');
-    source1.src = mp4Blob;
+    source1.src = mp4URL;
     source1.type = 'video/mp4';
     let source2 = document.createElement('source');
-    source2.src = webmBlob;
+    source2.src = webmURL;
     source2.type = 'video/webm';
 
     // Embed DOM elements into page
