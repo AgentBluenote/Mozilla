@@ -12,23 +12,25 @@ window.onload = function() {
   // Create an instance of a db object for us to store our database in
   let db;
 
-  // Loop through the video titles one by one
-  for(let i = 0; i < videos.length; i++) {
-    // Open transaction, get object store, and get() the video by name
-    let objectStore = db.transaction('videos').objectStore('videos');
-    let request = objectStore.get(video);
-    request.onsuccess = function() {
-      // If the result exists/is not undefined
-      if(request.result) {
-        // Blobs are stored in the IDB, so need to create object URLs out of these
-        let mp4 = URL.createObjectURL(request.result.mp4);
-        let webm = URL.createObjectURL(request.result.webm);
+  function init() {
+    // Loop through the video titles one by one
+    for(let i = 0; i < videos.length; i++) {
+      // Open transaction, get object store, and get() the video by name
+      let objectStore = db.transaction('videos').objectStore('videos');
+      let request = objectStore.get(video);
+      request.onsuccess = function() {
+        // If the result exists/is not undefined
+        if(request.result) {
+          // Blobs are stored in the IDB, so need to create object URLs out of these
+          let mp4 = URL.createObjectURL(request.result.mp4);
+          let webm = URL.createObjectURL(request.result.webm);
 
-        displayVideo(mp4, webm, request.result.name);
-      } else {
-        fetchVideoFromNetwork(videos[i]);
-      }
-    };
+          displayVideo(mp4, webm, request.result.name);
+        } else {
+          fetchVideoFromNetwork(videos[i]);
+        }
+      };
+    }
   }
 
   // Define the fetchVideoFromNetwork() function
@@ -105,6 +107,7 @@ window.onload = function() {
 
     // Store the opened database object in the db variable. This is used a lot below
     db = request.result;
+    init();
   };
 
   // Setup the database tables if this has not already been done
