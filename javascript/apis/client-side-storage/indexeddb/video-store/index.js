@@ -2,40 +2,33 @@ window.onload = function() {
   // Create constants
   const section = document.querySelector('section');
   const videos = [
-    { 'name' : 'crystal', 'offline' : 'no' },
-    { 'name' : 'elf', 'offline' : 'no' },
-    { 'name' : 'frog', 'offline' : 'no' },
-    { 'name' : 'monster', 'offline' : 'no' },
-    { 'name' : 'pig', 'offline' : 'no' },
-    { 'name' : 'rabbit', 'offline' : 'no' }
+    { 'name' : 'crystal' },
+    { 'name' : 'elf' },
+    { 'name' : 'frog' },
+    { 'name' : 'monster' },
+    { 'name' : 'pig' },
+    { 'name' : 'rabbit' }
   ];
   // Create an instance of a db object for us to store our database in
   let db;
 
-  // Loop through the video titles and display each one
+  // Loop through the video titles one by one
   for(let i = 0; i < videos.length; i++) {
-    if(videos[i].offline === 'no') {
-      // fetch the video from the network if it is not saved in the IDB
-      fetchVideoFromNetwork(videos[i]);
-    } else {
-      // fetch the video from the IDB if it is
-      fetchVideoFromIDB(videos[i]);
-    }
-  }
-
-  // Define fetchVideoFromIDB() function
-  function fetchVideoFromIDB(video) {
     // Open transaction, get object store, and get() the video by name
     let objectStore = db.transaction('videos').objectStore('videos');
     let request = objectStore.get(video);
-    // After the request is successful, run DisplayVideo() to show it on the page
     request.onsuccess = function() {
-      // Blobs are stored in the IDB, so need to create object URLs out of these
-      let mp4 = URL.createObjectURL(request.result.mp4);
-      let webm = URL.createObjectURL(request.result.webm);
+      // If the result exists/is not undefined
+      if(request.result) {
+        // Blobs are stored in the IDB, so need to create object URLs out of these
+        let mp4 = URL.createObjectURL(request.result.mp4);
+        let webm = URL.createObjectURL(request.result.webm);
 
-      displayVideo(mp4, webm, request.result.name);
-    }
+        displayVideo(mp4, webm, request.result.name);
+      } else {
+        fetchVideoFromNetwork(videos[i]);
+      }
+    };
   }
 
   // Define the fetchVideoFromNetwork() function
@@ -112,10 +105,6 @@ window.onload = function() {
 
     // Store the opened database object in the db variable. This is used a lot below
     db = request.result;
-
-    for(let j = 0; j < videos.length; j++) {
-      checkOffline(videos[j]);
-    }
   };
 
   // Setup the database tables if this has not already been done
@@ -134,18 +123,4 @@ window.onload = function() {
 
     console.log('Database setup complete');
   };
-
-  // Define checkOffline() function to check whether any of the videos
-  // have been previously saved offline
-
-  function checkOffline(video) {
-    let objectStore = db.transaction('videos').objectStore('videos');
-    var request = objectStore.get(video.name);
-    request.onsuccess = function() {
-      if(request.result) {
-        video.offline = 'yes';
-      };
-    };
-  }
-
 };
