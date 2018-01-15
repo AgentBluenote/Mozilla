@@ -17,7 +17,7 @@ window.onload = function() {
     for(let i = 0; i < videos.length; i++) {
       // Open transaction, get object store, and get() the video by name
       let objectStore = db.transaction('videos').objectStore('videos');
-      let request = objectStore.get(video);
+      let request = objectStore.get(videos[i].name);
       request.onsuccess = function() {
         // If the result exists/is not undefined
         if(request.result) {
