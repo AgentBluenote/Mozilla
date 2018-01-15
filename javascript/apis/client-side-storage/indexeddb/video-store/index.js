@@ -13,17 +13,19 @@ window.onload = function() {
   let db;
 
   function init() {
-    // Loop through the video titles one by one
+    // Loop through the video names one by one
     for(let i = 0; i < videos.length; i++) {
-      // Open transaction, get object store, and get() the video by name
+      // Open transaction, get object store, and get() each video by name
       let objectStore = db.transaction('videos').objectStore('videos');
       let request = objectStore.get(videos[i].name);
       request.onsuccess = function() {
-        // If the result exists/is not undefined
+        // If the result exists in the database (is not undefined)
         if(request.result) {
+          // Grab the videos from IDB and display them using displayVideo()
           console.log('taking videos from IDB');
           displayVideo(request.result.mp4, request.result.webm, request.result.name);
         } else {
+          // Fetch the videos from the network
           fetchVideoFromNetwork(videos[i]);
         }
       };
@@ -33,7 +35,8 @@ window.onload = function() {
   // Define the fetchVideoFromNetwork() function
   function fetchVideoFromNetwork(video) {
     console.log('fetching videos from network');
-    // Fetch the MP4 and WebM version of the video using fetch() function
+    // Fetch the MP4 and WebM versions of the video using the fetch() function,
+    // then expose their response bodies as blobs
     let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =>
       response.blob()
     );
@@ -43,18 +46,25 @@ window.onload = function() {
 
     // Only run the next code when both promises have fulfilled
     Promise.all([mp4Blob, webmBlob]).then(function(values) {
+      // display the video fetched from the network with displayVideo()
       displayVideo(values[0], values[1], video.name);
+      // store it in the IDB using storeVideo()
       storeVideo(values[0], values[1], video.name);
     });
   }
 
+  // Define the storeVideo() function
   function storeVideo(mp4Blob, webmBlob, name) {
+    // Open transaction, get object store; make it a readwrite so we can write to the IDB
     let objectStore = db.transaction(['videos'], 'readwrite').objectStore('videos');
+    // Create a record to add to the IDB
     let record = {
       mp4 : mp4Blob,
       webm : webmBlob,
       name : name
     }
+
+    // Add the record to the IDB using add()
     let request = objectStore.add(record);
 
     request.onsuccess = function() {
