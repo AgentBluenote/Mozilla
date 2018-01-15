@@ -78,10 +78,10 @@ window.onload = function() {
     let video = document.createElement('video');
     video.controls = true;
     let source1 = document.createElement('source');
-    source1.src = URL.createObjectURL(mp4Blob);
+    source1.src = mp4Blob;
     source1.type = 'video/mp4';
     let source2 = document.createElement('source');
-    source2.src = URL.createObjectURL(webmBlob);
+    source2.src = webmBlob;
     source2.type = 'video/webm';
 
     // Embed DOM elements into page
