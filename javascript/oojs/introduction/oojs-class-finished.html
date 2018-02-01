@@ -6,29 +6,14 @@
   </head>
 
   <body>
-    <div>
-      <label for="jscode">Enter code:</label>
-      <input type="text" id="jscode">
-      <button>Submit code</button>
-    </div>
 
-    <p></p>
   </body>
 
     <script>
-      var input = document.querySelector('input');
-      var btn = document.querySelector('button');
-      var para = document.querySelector('p');
-
-      btn.onclick = function() {
-        var code = input.value;
-        para.textContent = eval(code);
-      }
-
       function Person(first, last, age, gender, interests) {
         this.name = {
-          first,
-          last
+          'first': first,
+          'last' : last
         };
         this.age = age;
         this.gender = gender;
