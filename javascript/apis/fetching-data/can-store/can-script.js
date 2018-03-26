@@ -25,7 +25,8 @@ function initialize() {
 
   // keep a record of what the last category and search term entered were
   var lastCategory = category.value;
-  var lastSearch = searchTerm.value;
+  // no search has been made yet
+  var lastSearch = '';
 
   // these contain the results of filtering by category, and search term
   // finalGroup will contain the products that need to be displayed after
@@ -59,12 +60,12 @@ function initialize() {
     // if the category and search term are the same as they were the last time a
     // search was run, the results will be the same, so there is no point running
     // it again — just return out of the function
-    if(category.value === lastCategory && searchTerm.value === lastSearch) {
+    if(category.value === lastCategory && searchTerm.value.trim() === lastSearch) {
       return;
     } else {
       // update the record of last category and search term
       lastCategory = category.value;
-      lastSearch = searchTerm.value;
+      lastSearch = searchTerm.value.trim();
       // In this case we want to select all products, then filter them by the search
       // term, so we just set categoryGroup to the entire JSON object, then run selectProducts()
       if(category.value === 'All') {
@@ -97,13 +98,13 @@ function initialize() {
   function selectProducts() {
     // If no search term has been entered, just make the finalGroup array equal to the categoryGroup
     // array — we don't want to filter the products further — then run updateDisplay().
-    if(searchTerm.value === '') {
+    if(searchTerm.value.trim() === '') {
       finalGroup = categoryGroup;
       updateDisplay();
     } else {
       // Make sure the search term is converted to lower case before comparison. We've kept the
       // product names all lower case to keep things simple
-      var lowerCaseSearchTerm = searchTerm.value.toLowerCase();
+      var lowerCaseSearchTerm = searchTerm.value.trim().toLowerCase();
       // For each product in categoryGroup, see if the search term is contained inside the product name
       // (if the indexOf() result doesn't return -1, it means it is) — if it is, then push the product
       // onto the finalGroup array
