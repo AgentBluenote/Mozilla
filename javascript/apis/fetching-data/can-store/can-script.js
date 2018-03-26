@@ -25,7 +25,8 @@ function initialize() {
 
   // keep a record of what the last category and search term entered were
   var lastCategory = category.value;
-  var lastSearch = searchTerm.value;
+  // no search has been made yet
+  var lastSearch = '';
 
   // these contain the results of filtering by category, and search term
   // finalGroup will contain the products that need to be displayed after
