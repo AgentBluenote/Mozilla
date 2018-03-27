@@ -72,10 +72,14 @@
       var displayNav = false;
 
       // Event listeners to control the functionality
-      searchForm.addEventListener('submit', fetchResults);
+      searchForm.addEventListener('submit', submitSearch);
       nextBtn.addEventListener('click', nextPage);
       previousBtn.addEventListener('click', previousPage);
-
+      
+      function submitSearch(e){
+        pageNumber = 0;
+        fetchResults(e);
+      }
 
       function fetchResults(e) {
         // Use preventDefault() to stop the form submitting
