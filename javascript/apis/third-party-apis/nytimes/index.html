@@ -82,7 +82,7 @@
         e.preventDefault();
 
         // Assemble the full URL
-        url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value;
+        url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value + '&fq=document_type:("article")';
 
         if(startDate.value !== '') {
           url += '&begin_date=' + startDate.value;
