@@ -140,7 +140,7 @@
             para2.textContent = 'Keywords: ';
             for(var j = 0; j < current.keywords.length; j++) {
               var span = document.createElement('span');
-              span.textContent += current.keywords[j].value + ' ';
+              span.textContent = current.keywords[j].value + ' ';
               para2.appendChild(span);
             }
 
