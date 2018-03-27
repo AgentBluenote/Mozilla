@@ -132,7 +132,7 @@
 
             link.href = current.web_url;
             link.textContent = current.headline.main;
-            para1.textContent = current.lead_paragraph;
+            para1.textContent = current.snippet;
             para2.textContent = 'Keywords: ';
             for(var j = 0; j < current.keywords.length; j++) {
               var span = document.createElement('span');
