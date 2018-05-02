@@ -26,7 +26,7 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
 
 <dl>
 <dt>Inheritance</dt>
-<dd>One mark for using <code>shape.call(this, x, y, exists)</code> to inherit the <code>x</code>, <code>y</code>, and <code>exists</code> properties. One mark for specifying them as parameters in the constructor.</dd>
+<dd>One mark for using <code>shape.call(this, x, y, 20, 20, exists)</code> to inherit the <code>x</code>, <code>y</code>, <code>velx</code>, <code>velY</code>, and <code>exists</code> properties, but keeping the 3rd and 4th properties constant at 20. One mark for specifying <code>x</code>/<code>y</code>/<code>exists</code> as parameters in the constructor.</dd>
 <dt>Specifying new properties</dt>
 <dd>Two marks for specifying the four new required properties.</dd>
 <dt>Prototype and constructor</dt>

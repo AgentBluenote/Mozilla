@@ -94,12 +94,10 @@ Ball.prototype.collisionDetect = function() {
 // define EvilCircle constructor, inheriting from Shape
 
 function EvilCircle(x, y, exists) {
-  Shape.call(this, x, y, exists);
+  Shape.call(this, x, y, 20, 20, exists);
 
   this.color = 'white';
   this.size = 10;
-  this.velX = 20;
-  this.velY = 20;
 }
 
 EvilCircle.prototype = Object.create(Shape.prototype);
