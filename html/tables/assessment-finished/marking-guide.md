@@ -24,7 +24,7 @@ The overall mark awarded is out of 34. Work out their final mark, and then divid
   <dt>Create all the content rows inside the table body, remembering to make all the row headings into headings semantically (15 marks).</dt>
   <dd>This is the most difficult part of the table — it requires getting all the group row headings in the right rows, and making them span the right number of rows and columns.
     <ul>
-      <li>First of all, each row needs to be put inside the <code>&lt;th&gt;</code> (1 mark).</li>
+      <li>First of all, each row needs to be put inside the <code>&lt;tbody&gt;</code> (1 mark).</li>
       <li>Each row needs to contain a <code>&lt;th&gt;</code> element containing the planet name at the start followed by nine <code>&lt;td&gt;</code> elements containing the planet's data (5 marks). Give full marks if this is mostly right with a couple of typos, but start to reduce the mark at your discretion if significant data points are wrong, wrongly placed, or omitted. Take two marks off if the planet names are not put in headers.</li>
       <li>The first body row needs to contain an extra <code>&lt;th&gt;</code> element at the start of it, containing "Terrestial planets", with <code>rowspan="4"</code> and <code>colspan="2"</code> (2 marks).</li>
       <li>The fifth body row needs to contain two extra <code>&lt;th&gt;</code> elements at the start, containing "Jovian planets" and "Gas giants" respectively. The former needs <code>rowspan="4"</code>, and the latter needs <code>rowspan="2"</code> (3 marks).</li>
