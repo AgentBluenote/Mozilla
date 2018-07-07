@@ -20,7 +20,7 @@ The selector `nav` should have `position: sticky` (2 marks) plus an offset value
 
 The image should be floated left `float: left` (2 marks) with a right and bottom margin to move the text away from it (3 marks).
 
-**The <article> and <aside> elements should display as a two column layout. The columns should be a flexible size so that if the browser window shrinks smaller the columns become narrower.**
+**The `<article>` and `<aside>` elements should display as a two column layout. The columns should be a flexible size so that if the browser window shrinks smaller the columns become narrower.**
 
 Here the student would ideally use CSS Grid  `display: grid` (2 marks), with the `fr` unit for the columns `grid-template-columns: 3fr 1fr` (2 marks). It would also be possible to use flexbox, and that would be acceptable too. Percentages would work for the column tracks, but ideally they realise that the fr unit works nicely here. The actual proportions they pick don't really matter. A `grid-gap` or `gap` property should separate the tracks, e.g. `grid-gap: 20px` (2 marks).
 
