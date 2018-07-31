@@ -30,7 +30,7 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-  if(customName.value != '') {
+  if(customName.value !== '') {
     var name = customName.value;
 
   }
