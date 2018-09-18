@@ -153,7 +153,7 @@ function initialize() {
         response.blob().then(function(blob) {
           // Convert the blob to an object URL — this is basically an temporary internal URL
           // that points to an object stored inside the browser
-          objectURL = URL.createObjectURL(blob);
+          var objectURL = URL.createObjectURL(blob);
           // invoke showProduct
           showProduct(objectURL, product);
         });
