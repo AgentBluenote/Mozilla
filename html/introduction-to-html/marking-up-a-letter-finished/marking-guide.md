@@ -4,7 +4,7 @@ The following guide outlines a marking guide for the MDN Learning Area HTML Topi
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or somethign that isn't clearly cut.
 
-The overall mark awarded is out of 47. Work out their final mark, and then divide by 47 and multiply by 100 to give a percentage mark. For reference, you can find a [finished marked up letter](index.html) that would be awarded top marks.
+The overall mark awarded is out of 45.5. Work out their final mark, and then divide by 45.5 and multiply by 100 to give a percentage mark. For reference, you can find a [finished marked up letter](index.html) that would be awarded top marks.
 
 ## Block/structural semantics
 
@@ -52,14 +52,6 @@ The overall mark awarded is out of 47. Work out their final mark, and then divid
 <dd>Each acronym/abbreviation in the main text of the letter — "PhD", "HTML", "CSS", "BC" and "Esq" — should be wrapped in an &lt;abbr&gt; element with a title attribute, for example &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</dd>
 <dt>The six sub/superscripts should be marked up appropriately (3 marks, half a mark each).</dt>
 <dd>The four numbers in the chemical formulae should be wrapped in a &lt;sub&gt; element, e.g. H&lt;sub&gt;2&lt;/sub&gt;O. The rightmost number in both exponential expressions should be wrapped in a &lt;sup&gt; element, e.g. 10&lt;sup&gt;3&lt;/sup&gt;.</dd>
-<dt>The degree symbols, greater than symbol and multiply symbols should be marked up using appropriate entity references (1.5 marks, half a mark for each).</dt>
-<dd>
-<ul>
-<li>In the case of the pathetic attempts at degree symbols, e.g. 30oC, replace o with &amp;deg;</li>
-<li>In the case of the greater than symbol (>), replace it with a &amp;gt;</li>
-<li>In the case of the lower case x's used as multiply symbols, e.g. 3 x 10, replace x with &amp;times;</li>
-</ul>
-</dd>
 <dt>Try to mark up at least two appropriate words in the text with strong importance/emphasis (1 mark, half a mark each)</dt>
 <dd>This is very open to interpretation; anything that seems appropriate should be fine.</dd>
 <dt>There are two places where a hyperlink should be added; add appropriate links with titles. For the location that the links point to, just use http://example.com (4 marks)</dt>
