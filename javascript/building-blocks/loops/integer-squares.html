@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Integer squares generator</title>
     <style>
-      
+
     </style>
   </head>
   <body>
@@ -14,28 +14,28 @@
   <button>Generate integer squares</button>
 
   <p>Output: </p>
-    
+
 
     <script>
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+    const para = document.querySelector('p');
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
 
     btn.addEventListener('click', function() {
       para.textContent = 'Output: ';
-      var num = input.value;
+      let num = input.value;
       input.value = '';
       input.focus();
-      for (var i = 1; i <= num; i++) {
-        var sqRoot = Math.sqrt(i);
+      for (let i = 1; i <= num; i++) {
+        let sqRoot = Math.sqrt(i);
         if(Math.floor(sqRoot) !== sqRoot) {
           continue;
         }
 
         para.textContent += i + ' ';
-      } 
-    });  
+      }
+    });
     </script>
-    
+
   </body>
 </html>
