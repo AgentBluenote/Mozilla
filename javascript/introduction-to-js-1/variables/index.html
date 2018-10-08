@@ -55,11 +55,11 @@
   </head>
   <body>
 <script>
-    var geval = eval;
+    let geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      let inputDiv = document.createElement('div');
+      let inputPara = document.createElement('p');
+      let inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class','input');
       inputPara.textContent = '>';
@@ -75,14 +75,15 @@
     }
 
     function executeCode(e) {
+      let result;
       try {
-        var result = geval(e.target.value);
+        result = geval(e.target.value);
       } catch(e) {
-        var result = 'error — ' + e.message;
+        result = 'error — ' + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      let outputDiv = document.createElement('div');
+      let outputPara = document.createElement('p');
 
       outputDiv.setAttribute('class','output');
       outputPara.textContent = 'Result: ' + result;
