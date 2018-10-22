@@ -24,12 +24,12 @@
     <p>Player 1: Chris</p>
 
     <script>
-      var para = document.querySelector('p');
+      const para = document.querySelector('p');
 
       para.addEventListener('click', updateName);
 
       function updateName() {
-        var name = prompt('Enter a new name');
+        let name = prompt('Enter a new name');
         para.textContent = 'Player 1: ' + name;
       }
     </script>
