@@ -41,36 +41,29 @@
     </div>
 
     <script>
-
-      // Your JavaScript goes here
-
-      var randomNumber = Math.floor(Math.random() * 100) + 1;
-
-      var guesses = document.querySelector('.guesses');
-      var lastResult = document.querySelector('.lastResult');
-      var lowOrHi = document.querySelector('.lowOrHi');
-
-      var guessSubmit = document.querySelector('.guessSubmit');
-      var guessField = document.querySelector('.guessField');
-      var guessCount = 1;
-      var resetButton;
-
-      guessField.focus();
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      const guesses = document.querySelector('.guesses');
+      const lastResult = document.querySelector('.lastResult');
+      const lowOrHi = document.querySelector('.lowOrHi');
+      const guessSubmit = document.querySelector('.guessSubmit');
+      const guessField = document.querySelector('.guessField');
+      let guessCount = 1;
+      let resetButton;
 
       function checkGuess() {
-        var userGuess = Number(guessField.value);
-        if(guessCount === 1) {
+        let userGuess = Number(guessField.value);
+        if (guessCount === 1) {
           guesses.textContent = 'Previous guesses: ';
         }
+
         guesses.textContent += userGuess + ' ';
 
-
-        if(userGuess === randomNumber) {
+        if (userGuess === randomNumber) {
           lastResult.textContent = 'Congratulations! You got it right!';
           lastResult.style.backgroundColor = 'green';
           lowOrHi.textContent = '';
           setGameOver();
-        } else if(guessCount === 10) {
+        } else if (guessCount === 10) {
           lastResult.textContent = '!!!GAME OVER!!!';
           lowOrHi.textContent = '';
           setGameOver();
@@ -78,7 +71,7 @@
           lastResult.textContent = 'Wrong!';
           lastResult.style.backgroundColor = 'red';
           if(userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!';
+            lowOrHi.textContent = 'Last guess was too low!' ;
           } else if(userGuess > randomNumber) {
             lowOrHi.textContent = 'Last guess was too high!';
           }
@@ -102,21 +95,17 @@
 
       function resetGame() {
         guessCount = 1;
-
-        var resetParas = document.querySelectorAll('.resultParas p');
-        for(var i = 0 ; i < resetParas.length ; i++) {
+        const resetParas = document.querySelectorAll('.resultParas p');
+        for(let i = 0 ; i < resetParas.length ; i++) {
           resetParas[i].textContent = '';
         }
 
         resetButton.parentNode.removeChild(resetButton);
-
         guessField.disabled = false;
         guessSubmit.disabled = false;
         guessField.value = '';
         guessField.focus();
-
         lastResult.style.backgroundColor = 'white';
-
         randomNumber = Math.floor(Math.random() * 100) + 1;
       }
     </script>
