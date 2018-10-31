@@ -27,6 +27,7 @@ Pluto 0.0146 2,370 2095 0.7 153.3 5906.4 -225 5 Declassified as a planet in 2006
 
 Columns
 
+Name
 Mass (10<sup>24</sup>kg)
 Diameter (km)
 Density (kg/m<sup>3</sup>)
