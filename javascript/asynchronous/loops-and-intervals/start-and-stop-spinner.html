@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Start and stop spinner example</title>
+    <style>
+      html {
+        background-color: white;
+        height: 100%;
+      }
+
+      body {
+        height: inherit;
+        background-color: red;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div {
+        display: inline-block;
+        font-size: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>↻</div>
+    <script>
+
+      // Store reference to the div element, create a rotate counter
+      // and create an uninitialized variable to store the requestAnimationFrame() call in
+      const spinner = document.querySelector('div');
+      let rotateCount = 0;
+      let rAF;
+
+      // Boolean variable to store state of spinner — true is spinning, false is not spinning
+      let spinning = false;
+
+      // Create a draw() function
+      function draw() {
+        // Set the rotation of the div to be equal to rotateCount degrees
+        spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
+        // Increment rotateCount by 1
+        rotateCount += 2;
+        // If rotateCount gets to 360, set it back to 0, set it back to 0
+        if(rotateCount > 359) {
+          rotateCount = 0;
+        }
+        // Call the next frame in the animation
+        rAF = requestAnimationFrame(draw);
+      }
+
+      // event listener to start and stop spinner when page is clicked
+
+      document.body.addEventListener('click', () => {
+        if(spinning) {
+          cancelAnimationFrame(rAF);
+          spinning = false;
+        } else {
+          draw();
+          spinning = true;
+        }
+      })
+    </script>
+  </body>
+</html>
