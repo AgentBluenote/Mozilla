@@ -12,7 +12,6 @@
     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
     <script>
-      // 1. The basic part of the example
       var L;
 
       window.onload = function() {
@@ -21,15 +20,15 @@
         // 'map' refers to a <div> element with the ID map
         var map = L.mapquest.map('map', {
           center: [53.480759, -2.242631],
-          // 2. change map to hybrid and talk about different types of layer
+          // 1. change 'map' to 'hybrid', try other type of map
           layers: L.mapquest.tileLayer('hybrid'),
           zoom: 12
         });
 
-        // 3. Add control
-        map.addControl(L.mapquest.control());
+        // 2. Add control
+        map.addControl(L.mapquest.control({position: 'bottomright'}));
 
-        // 4. Add icon
+        // 3. Add icon
         L.marker([53.480759, -2.242631], {
           icon: L.mapquest.icons.marker({
             primaryColor: '#22407F',
