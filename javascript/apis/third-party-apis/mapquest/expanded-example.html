@@ -15,7 +15,7 @@
       var L;
 
       window.onload = function() {
-        L.mapquest.key = 'zwIP5XgnZrqG2OGmp9gpoaUV6Evt67Zo';
+        L.mapquest.key = 'YOUR-API-KEY-HERE';
 
         // 'map' refers to a <div> element with the ID map
         var map = L.mapquest.map('map', {
@@ -26,7 +26,7 @@
         });
 
         // 2. Add control
-        map.addControl(L.mapquest.control({position: 'bottomright'}));
+        map.addControl(L.mapquest.control());
 
         // 3. Add icon
         L.marker([53.480759, -2.242631], {
