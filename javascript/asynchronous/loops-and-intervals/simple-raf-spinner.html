@@ -29,18 +29,24 @@
     <div>↻</div>
     <script>
 
-      // Store reference to the div element, create a rotate counter
+      // Store reference to the div element, create a rotate counter and null startTime
       // and create an uninitialized variable to store the requestAnimationFrame() call in
       const spinner = document.querySelector('div');
       let rotateCount = 0;
+      let startTime = null;
       let rAF;
 
       // Create a draw() function
-      function draw() {
+      function draw(timestamp) {
+        if(!startTime) {
+         startTime = timestamp;
+        }
+
+        let rotateCount = (timestamp - startTime) / 3;
+
         // Set the rotation of the div to be equal to rotateCount degrees
         spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
-        // Increment rotateCount by 2
-        rotateCount += 2;
+
         // If rotateCount gets to 360, set it back to 0, set it back to 0
         if(rotateCount > 359) {
           rotateCount = 0;

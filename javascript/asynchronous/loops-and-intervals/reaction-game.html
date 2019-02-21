@@ -129,11 +129,12 @@
     </section>
     <script>
 
-      // Store reference to the spinner and spinner container, create a rotate counter,
+      // Store reference to the spinner and spinner container, create a rotate counter and null startTime
       // and create an uninitialized variable to store a requestAnimationFrame() call in,
       const spinner = document.querySelector('.spinner p');
       const spinnerContainer = document.querySelector('.spinner');
       let rotateCount = 0;
+      let startTime = null;
       let rAF;
 
       // Store references to the start button and the result paragraph
@@ -147,11 +148,16 @@
       }
 
       // Create a draw() function
-      function draw() {
+      function draw(timestamp) {
+        if(!startTime) {
+         startTime = timestamp;
+        }
+
+        let rotateCount = (timestamp - startTime) / 3;
+
         // Set the rotation of the div to be equal to rotateCount degrees
         spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
-        // Increment rotateCount by 2
-        rotateCount += 2;
+
         // If rotateCount gets to 360, set it back to 0, set it back to 0
         if(rotateCount > 359) {
           rotateCount = 0;
@@ -162,7 +168,7 @@
 
       // Initially hide the spinner and results
       result.style.display = 'none';
-      spinnerContainer.style.zIndex = -1;
+      spinnerContainer.style.display = 'none';
 
       // Reset the game to its initial state on restart
       function reset() {
@@ -179,7 +185,7 @@
         // Start the spinner spinning
         draw();
         // Show the spinner and hide the button
-        spinnerContainer.style.zIndex = 1;
+        spinnerContainer.style.display = 'block';
         btn.style.display = 'none';
         // run the setEndgame() function after a random number of seconds between 5 and 10
         setTimeout(setEndgame, random(5000,10000));
@@ -188,23 +194,22 @@
       // Function to allow players to take their turn when the time is right
       function setEndgame() {
         cancelAnimationFrame(rAF);
-        spinnerContainer.style.zIndex = -1;
+        spinnerContainer.style.display = 'none';
         result.style.display = 'block';
         result.textContent = 'PLAYERS GO!!';
 
         document.addEventListener('keydown', keyHandler);
 
         function keyHandler(e) {
-          console.log(e.keyCode);
-          if(e.keyCode === 65) {
-            document.removeEventListener('keydown', keyHandler);
+          console.log(e.key);
+          if(e.key === "a") {
             result.textContent = 'Player 1 won!!';
-            setTimeout(reset, 5000);
-          } else if(e.keyCode === 76) {
-            document.removeEventListener('keydown', keyHandler);
+          } else if(e.key === "l") {
             result.textContent = 'Player 2 won!!';
-            setTimeout(reset, 5000);
           }
+
+          document.removeEventListener('keydown', keyHandler);
+          setTimeout(reset, 5000);
         };
       }
     </script>
