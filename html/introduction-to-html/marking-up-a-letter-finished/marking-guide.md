@@ -63,7 +63,7 @@ The overall mark awarded is out of 45.5. Work out their final mark, and then div
   </ul>
 </dd>
 <dt>The university motto quote and citation should be marked up with appropriate elements (2 marks)</dt>
-<dd>"Be excellent to each other" should be wrapped in a &lt;q&gt; element, and "Bill S Preston, Esq" should be wrapped in a &lt;cite&gt; element</dd>
+<dd>"Be excellent to each other" should be wrapped in a &lt;q&gt; element, and "The memoirs of Bill S Preston, Esq" should be wrapped in a &lt;cite&gt; element</dd>
 </dl>
 
 ## The head of the document
