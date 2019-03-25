@@ -16,7 +16,7 @@ function init() {
   // Loop through the video names one by one
   for(let i = 0; i < videos.length; i++) {
     // Open transaction, get object store, and get() each video by name
-    let objectStore = db.transaction('videos').objectStore('videos');
+    let objectStore = db.transaction('videos_os').objectStore('videos_os');
     let request = objectStore.get(videos[i].name);
     request.onsuccess = function() {
       // If the result exists in the database (is not undefined)
@@ -56,7 +56,7 @@ function init() {
   // Define the storeVideo() function
 function storeVideo(mp4Blob, webmBlob, name) {
   // Open transaction, get object store; make it a readwrite so we can write to the IDB
-  let objectStore = db.transaction(['videos'], 'readwrite').objectStore('videos');
+  let objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
   // Create a record to add to the IDB
   let record = {
     mp4 : mp4Blob,
@@ -106,7 +106,7 @@ function storeVideo(mp4Blob, webmBlob, name) {
 
   // Open our database; it is created if it doesn't already exist
   // (see onupgradeneeded below)
-  let request = window.indexedDB.open('videos', 1);
+  let request = window.indexedDB.open('videos_db', 1);
 
   // onerror handler signifies that the database didn't open successfully
   request.onerror = function() {
@@ -128,9 +128,9 @@ function storeVideo(mp4Blob, webmBlob, name) {
     // Grab a reference to the opened database
     let db = e.target.result;
 
-    // Create an objectStore to store our notes in (basically like a single table)
+    // Create an objectStore to store our videos in (basically like a single table)
     // including a auto-incrementing key
-    let objectStore = db.createObjectStore('videos', { keyPath: 'name' });
+    let objectStore = db.createObjectStore('videos_os', { keyPath: 'name' });
 
     // Define what data items the objectStore will contain
     objectStore.createIndex('mp4', 'mp4', { unique: false });
