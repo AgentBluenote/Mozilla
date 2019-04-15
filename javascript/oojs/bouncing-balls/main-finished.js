@@ -72,30 +72,30 @@ Ball.prototype.collisionDetect = function() {
   }
 };
 
-// define array to store balls
+// define array to store balls and populate it
 
 var balls = [];
+
+while(balls.length < 25) {
+  var size = random(10,20);
+  var ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the adge of the canvas, to avoid drawing errors
+    random(0 + size,width - size),
+    random(0 + size,height - size),
+    random(-7,7),
+    random(-7,7),
+    'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+    size
+  );
+  balls.push(ball);
+}
 
 // define loop that keeps drawing the scene constantly
 
 function loop() {
   ctx.fillStyle = 'rgba(0,0,0,0.25)';
   ctx.fillRect(0,0,width,height);
-
-  while(balls.length < 25) {
-    var size = random(10,20);
-    var ball = new Ball(
-      // ball position always drawn at least one ball width
-      // away from the adge of the canvas, to avoid drawing errors
-      random(0 + size,width - size),
-      random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
-      'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
-      size
-    );
-    balls.push(ball);
-  }
 
   for(var i = 0; i < balls.length; i++) {
     balls[i].draw();
