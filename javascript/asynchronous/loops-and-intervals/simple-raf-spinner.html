@@ -49,7 +49,7 @@
 
         // If rotateCount gets to 360, set it back to 0, set it back to 0
         if(rotateCount > 359) {
-          rotateCount = 0;
+          rotateCount -= 360;
         }
         // Call the next frame in the animation
         rAF = requestAnimationFrame(draw);
