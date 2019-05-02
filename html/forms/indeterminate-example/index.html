@@ -43,22 +43,22 @@
   }
 
   function updateDisplay() {
-    var checkedCount = 1;
+    var checkedCount = 0;
     for(var i = 0; i < ingredients.length; i++) {
       if(ingredients[i].checked) {
         checkedCount++;
       }
     }
 
-    if(checkedCount === ingredients.length + 1) {
+    if(checkedCount === 0) {
+      overall.checked = false;
+      overall.indeterminate = false;
+    } else if(checkedCount === ingredients.length) {
       overall.checked = true;
       overall.indeterminate = false;
-    } else if(checkedCount <= ingredients.length + 1 && checkedCount > 1) {
-      overall.checked = false;
-      overall.indeterminate = true;
     } else {
       overall.checked = false;
-      overall.indeterminate = false;
+      overall.indeterminate = true;
     }
   }
 
