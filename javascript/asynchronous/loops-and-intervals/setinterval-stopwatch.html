@@ -47,11 +47,13 @@
       // When the start button is pressed, start running displayCount() once per second using displayInterval()
       startBtn.addEventListener('click', () => {
         stopWatch = setInterval(displayCount, 1000);
+        startBtn.disabled = true;
       });
 
       // When the stop button is pressed, clear the interval to stop the count.
       stopBtn.addEventListener('click', () => {
         clearInterval(stopWatch);
+        startBtn.disabled = false;
       });
 
       // When the reset button is pressed, set the counter back to zero, then immediately update the display
