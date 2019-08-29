@@ -58,6 +58,8 @@
 
       // When the reset button is pressed, set the counter back to zero, then immediately update the display
       resetBtn.addEventListener('click', () => {
+        clearInterval(stopWatch);
+        startBtn.disabled = false;
         secondCount = 0;
         displayCount();
       });
