@@ -153,15 +153,16 @@
          startTime = timestamp;
         }
 
-        let rotateCount = (timestamp - startTime) / 3;
+        rotateCount = (timestamp - startTime) / 3;
+        
+        // If rotateCount gets over 359, set it to 'remainder of dividing by 360'
+        if(rotateCount > 359) {
+          rotateCount %= 360;
+        }
 
         // Set the rotation of the div to be equal to rotateCount degrees
         spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
 
-        // If rotateCount gets to 360, set it back to 0, set it back to 0
-        if(rotateCount > 359) {
-          rotateCount -= 360;
-        }
         // Call the next frame in the animation
         rAF = requestAnimationFrame(draw);
       }
