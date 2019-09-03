@@ -35,8 +35,8 @@ The overall mark awarded is out of 45.5. Work out their final mark, and then div
   <li>Mark up the exotic dances as a description list (&lt;dl&gt;/&lt;dd&gt;/&lt;dt&gt;) (2 marks)</li>
 </ul>
 </dd>
-<dt>The two addresses can just be put inside paragraphs; each line of the address should sit on a new line, but not be in a new paragraph. (3 marks)</dt>
-<dd>Wrap both of the addresses in an &lt;p&gt; element, and put a &lt;br&gt; element at the end of each line of the address, except for the last line in each case. The <code>&lt;address&gt;</code> is not appropriate, because Dr. Gaye and the sender did not create the page; just some of the content. See [Marking up contact details](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Marking_up_contact_details)</dd>
+<dt>The two addresses should be put inside <code>&lt;address&gt;</code> elements. Each line of the address should sit on a new line, but not be in a new paragraph. (3 marks)</dt>
+<dd>Wrap both of the addresses in an &lt;address&gt; element, and put a &lt;br&gt; element at the end of each line of the address, except for the last line in each case.</dd>
 </dl>
 
 ## Inline semantics
