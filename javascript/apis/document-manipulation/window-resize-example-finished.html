@@ -24,18 +24,18 @@
     </div>
 
     <script>
-      var div = document.querySelector('div');
-      var WIDTH = window.innerWidth;
-      var HEIGHT = window.innerHeight;
+      const div = document.querySelector('div');
+      let winWidth = window.innerWidth;
+      let winHeight = window.innerHeight;
 
-      div.style.width = WIDTH + 'px';
-      div.style.height = HEIGHT + 'px';
+      div.style.width = winWidth + 'px';
+      div.style.height = winHeight + 'px';
 
       window.onresize = function() {
-        WIDTH = window.innerWidth;
-        HEIGHT = window.innerHeight;
-        div.style.width = WIDTH + 'px';
-        div.style.height = HEIGHT + 'px';
+        winWidth = window.innerWidth;
+        winHeight = window.innerHeight;
+        div.style.width = winWidth + 'px';
+        div.style.height = winHeight + 'px';
       }
     </script>
   </body>
