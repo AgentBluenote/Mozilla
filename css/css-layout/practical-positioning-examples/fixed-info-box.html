@@ -20,10 +20,11 @@
   }
 
   /* info-box setup */
-  
+
   .info-box {
-    width: 450px;
+    width: 452px;
     height: 400px;
+    margin: 0 auto;
     position: fixed;
     top: 0;
   }
@@ -31,8 +32,11 @@
   /* styling info-box list */
 
   .info-box ul {
-    padding-left: 0;
-    margin-top: 0;
+    border: 1px solid #b60000;
+    overflow: hidden;
+    height: 50px;
+    margin: 0;
+    padding: 0;
   }
 
   .info-box li {
@@ -46,18 +50,19 @@
     text-decoration: none;
     width: 100%;
     line-height: 3;
-    background-color: red;
-    color: black;
+    background: white;
+    color: #b60000;
     text-align: center;
+    font-weight: bold;
   }
 
   .info-box li a:focus, li a:hover {
-    background-color: #a60000;
+    background-color: #b60000;
     color: white;
   }
 
   .info-box li a.active {
-    background-color: #a60000;
+    background-color: #b60000;
     color: white;
   }
 
@@ -70,10 +75,10 @@
   }
 
   .info-box article {
-    background-color: #a60000;
+    background-color: #b60000;
     color: white;
     position: absolute;
-    padding: 10px;
+    padding: 10px 20px;
     height: 352px;
     top: 0;
     left: 0;
@@ -84,7 +89,7 @@
   }
 
   /* Styling our fake content */
-  
+
   .fake-content {
     background-color: #a60000;
     color: white;
@@ -92,7 +97,7 @@
     height: 2000px;
     margin-left: 470px;
   }
-  
+
 
   </style>
 </head>
@@ -168,6 +173,6 @@ function setTabHandler(tab, tabPos) {
 }
 
 </script>
-  
+
 </body>
 </html>
