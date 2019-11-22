@@ -33,15 +33,15 @@
     <div data-message="This is from the third button" tabindex="0" role="button">And me!</div>
 
     <script>
-      var buttons = document.querySelectorAll('div');
+      const buttons = document.querySelectorAll('div');
 
-      for(var i = 0; i < buttons.length; i++) {
+      for(let i = 0; i < buttons.length; i++) {
         addHandler(buttons[i]);
       }
 
       function addHandler(button) {
         button.onclick = function(e) {
-          var message = e.target.getAttribute('data-message');
+          let message = e.target.getAttribute('data-message');
           alert(message);
         }
       }

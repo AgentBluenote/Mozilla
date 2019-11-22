@@ -40,16 +40,16 @@
       </blockquote>
     </section>
     <script>
-    var quotePara = document.querySelector('section p');
+    const quotePara = document.querySelector('section p');
 
-    var quoteJson;
+    let quoteJson;
 
     getQuotes('quotes.json', populateJson);
 
-    var intervalID = window.setInterval(showQuote, 10000);
+    let intervalID = window.setInterval(showQuote, 10000);
 
     function getQuotes(url, callback) {
-      var request = new XMLHttpRequest();
+      let request = new XMLHttpRequest();
       request.open('GET', url);
       request.responseType = 'json';
       request.send();
@@ -66,7 +66,7 @@
     }
 
     function showQuote() {
-      var random = Math.floor((Math.random()*25));
+      let random = Math.floor((Math.random()*25));
       quotePara.textContent = quoteJson[random].quote + ' -- ' + quoteJson[random].author;
     }
     </script>
