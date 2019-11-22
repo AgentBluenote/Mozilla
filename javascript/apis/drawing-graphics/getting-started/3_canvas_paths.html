@@ -17,10 +17,10 @@
 
     <script>
 
-      var canvas = document.querySelector('.myCanvas');
-      var width = canvas.width = window.innerWidth;
-      var height = canvas.height = window.innerHeight;
-      var ctx = canvas.getContext('2d');
+      const canvas = document.querySelector('.myCanvas');
+      const width = canvas.width = window.innerWidth;
+      const height = canvas.height = window.innerHeight;
+      const ctx = canvas.getContext('2d');
 
       ctx.fillStyle = 'rgb(0,0,0)';
       ctx.fillRect(0,0,width,height);
@@ -33,7 +33,7 @@
       ctx.beginPath();
       ctx.moveTo(50,50);
       ctx.lineTo(150,50);
-      var triHeight = 50 * Math.tan(degToRad(60));
+      let triHeight = 50 * Math.tan(degToRad(60));
       ctx.lineTo(100,50+triHeight);
       ctx.lineTo(50,50);
       ctx.fill();

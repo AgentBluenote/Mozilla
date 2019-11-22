@@ -30,17 +30,17 @@
     </ul>
 
     <script>
-      var list = document.querySelector('ul');
-      var input = document.querySelector('input');
-      var button = document.querySelector('button');
+      const list = document.querySelector('ul');
+      const input = document.querySelector('input');
+      const button = document.querySelector('button');
 
       button.onclick = function() {
-        var myItem = input.value;
+        let myItem = input.value;
         input.value = '';
 
-        var listItem = document.createElement('li');
-        var listText = document.createElement('span');
-        var listBtn = document.createElement('button');
+        const listItem = document.createElement('li');
+        const listText = document.createElement('span');
+        const listBtn = document.createElement('button');
 
         listItem.appendChild(listText);
         listText.textContent = myItem;

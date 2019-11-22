@@ -103,9 +103,9 @@ window.onload = function() {
       if(cursor) {
         // Create a list item, h3, and p to put each data item inside when displaying it
         // structure the HTML fragment, and append it inside the list
-        let listItem = document.createElement('li');
-        let h3 = document.createElement('h3');
-        let para = document.createElement('p');
+        const listItem = document.createElement('li');
+        const h3 = document.createElement('h3');
+        const para = document.createElement('p');
 
         listItem.appendChild(h3);
         listItem.appendChild(para);
@@ -120,7 +120,7 @@ window.onload = function() {
         listItem.setAttribute('data-note-id', cursor.value.id);
 
         // Create a button and place it inside each listItem
-        let deleteBtn = document.createElement('button');
+        const deleteBtn = document.createElement('button');
         listItem.appendChild(deleteBtn);
         deleteBtn.textContent = 'Delete';
 
@@ -133,7 +133,7 @@ window.onload = function() {
       } else {
         // Again, if list item is empty, display a 'No notes stored' message
         if(!list.firstChild) {
-          let listItem = document.createElement('li');
+          const listItem = document.createElement('li');
           listItem.textContent = 'No notes stored.'
           list.appendChild(listItem);
         }
@@ -164,7 +164,7 @@ window.onload = function() {
 
       // Again, if list item is empty, display a 'No notes stored' message
       if(!list.firstChild) {
-        let listItem = document.createElement('li');
+        const listItem = document.createElement('li');
         listItem.textContent = 'No notes stored.';
         list.appendChild(listItem);
       }

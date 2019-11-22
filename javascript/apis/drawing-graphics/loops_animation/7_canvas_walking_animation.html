@@ -16,23 +16,22 @@
     </canvas>
 
     <script>
-
-      var canvas = document.querySelector('.myCanvas');
-      var width = canvas.width = window.innerWidth;
-      var height = canvas.height = window.innerHeight;
-      var ctx = canvas.getContext('2d');
+      const canvas = document.querySelector('.myCanvas');
+      const width = canvas.width = window.innerWidth;
+      const height = canvas.height = window.innerHeight;
+      const ctx = canvas.getContext('2d');
 
       ctx.fillStyle = 'rgb(0,0,0)';
       ctx.fillRect(0,0,width,height);
 
       ctx.translate(width/2,height/2);
 
-      var image = new Image();
+      let image = new Image();
       image.src = 'walk-right.png';
       image.onload = draw;
 
-      var sprite = 0;
-      var posX = 0;
+      let sprite = 0;
+      let posX = 0;
 
       function draw() {
         ctx.fillRect(-(width/2),-(height/2),width,height);

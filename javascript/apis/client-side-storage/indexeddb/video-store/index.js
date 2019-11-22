@@ -84,15 +84,15 @@ function storeVideo(mp4Blob, webmBlob, name) {
     let webmURL = URL.createObjectURL(webmBlob);
 
     // Create DOM elements to embed video in the page
-    let article = document.createElement('article');
-    let h2 = document.createElement('h2');
+    const article = document.createElement('article');
+    const h2 = document.createElement('h2');
     h2.textContent = title;
-    let video = document.createElement('video');
+    const video = document.createElement('video');
     video.controls = true;
-    let source1 = document.createElement('source');
+    const source1 = document.createElement('source');
     source1.src = mp4URL;
     source1.type = 'video/mp4';
-    let source2 = document.createElement('source');
+    const source2 = document.createElement('source');
     source2.src = webmURL;
     source2.type = 'video/webm';
 

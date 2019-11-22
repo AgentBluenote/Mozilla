@@ -46,18 +46,18 @@
 
     <script>
 
-      var canvas = document.querySelector('.myCanvas');
-      var width = canvas.width = window.innerWidth;
-      var height = canvas.height = window.innerHeight-85;
-      var ctx = canvas.getContext('2d');
+      const canvas = document.querySelector('.myCanvas');
+      const width = canvas.width = window.innerWidth;
+      const height = canvas.height = window.innerHeight-85;
+      const ctx = canvas.getContext('2d');
 
       ctx.fillStyle = 'rgb(0,0,0)';
       ctx.fillRect(0,0,width,height);
 
-      var colorPicker = document.querySelector('input[type="color"]');
-      var sizePicker = document.querySelector('input[type="range"]');
-      var output = document.querySelector('.output');
-      var clearBtn = document.querySelector('button');
+      const colorPicker = document.querySelector('input[type="color"]');
+      const sizePicker = document.querySelector('input[type="range"]');
+      const output = document.querySelector('.output');
+      const clearBtn = document.querySelector('button');
 
       // covert degrees to radians
       function degToRad(degrees) {
@@ -71,9 +71,9 @@
       }
 
       // store mouse pointer coordinates, and whether the button is pressed
-      var curX;
-      var curY;
-      var pressed = false;
+      let curX;
+      let curY;
+      let pressed = false;
 
       // update mouse pointer coordinates
       document.onmousemove = function(e) {
