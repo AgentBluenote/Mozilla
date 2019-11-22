@@ -41,24 +41,24 @@
 
     <script>
 
-      var btn = document.querySelector('button');
+      const btn = document.querySelector('button');
 
       btn.onclick = function() {
         displayMessage('Brian: Hi there, how are you today?','chat');
       };
 
       function displayMessage(msgText,msgType) {
-        var html = document.querySelector('html');
+        const html = document.querySelector('html');
 
-        var panel = document.createElement('div');
+        const panel = document.createElement('div');
         panel.setAttribute('class','msgBox');
         html.appendChild(panel);
 
-        var msg = document.createElement('p');
+        const msg = document.createElement('p');
         msg.textContent = msgText;
         panel.appendChild(msg);
 
-        var closeBtn = document.createElement('button');
+        const closeBtn = document.createElement('button');
         closeBtn.textContent = 'x';
         panel.appendChild(closeBtn);
 

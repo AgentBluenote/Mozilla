@@ -14,8 +14,8 @@
     <h1>This is my website</h1>
 
     <script>
-      var select = document.querySelector('select');
-      var html = document.querySelector('html');
+      const select = document.querySelector('select');
+      const html = document.querySelector('html');
 
       select.onchange = function() {
         select.value === 'black' ? update('black','white') : update('white','black');

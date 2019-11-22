@@ -4,7 +4,7 @@ The following guide outlines a marking guide for the "Introducing JavaScript Obj
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 45. Work out their final mark, and then divide by 45 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
+The overall mark awarded is out of 44. Work out their final mark, and then divide by 44 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
 
 ## Creating our new objects
 
@@ -52,11 +52,10 @@ The overall mark awarded is out of 45. Work out their final mark, and then divid
   </ul>
 </dd>
 <dt>setControls()</dt>
-<dd>Four marks for this. You need to:
+<dd>Three marks for this. You need to:
   <ul>
     <li>Write a container for the method definition, i.e. <code>EvilCircle.prototype.setControls = function() { }</code>  (1 mark).</li>
     <li>Copy the provided code block into the method (1 mark).</li>
-    <li>Look the key codes up on MDN or a similar resource and state that they map to WASD (1 mark).</li>
     <li>Explain that we needed to include <code>var _this = this;</code> because we need to reference this as it is inside the constructor's scope. If we didn't include this line and just referenced <code>this</code> inside the inner event handler function, it wouldn't work, as the scope would be the event handler, not the outer constructor function scope. (1 mark)</li>
   </ul>
 </dd>

@@ -25,10 +25,10 @@
     </form>
     <p></p>
     <script>
-      var form = document.querySelector('form');
-      var fname = document.getElementById('fname');
-      var lname = document.getElementById('lname');
-      var para = document.querySelector('p');
+      const form = document.querySelector('form');
+      const fname = document.getElementById('fname');
+      const lname = document.getElementById('lname');
+      const para = document.querySelector('p');
 
       form.onsubmit = function(e) {
         if(fname.value === '' || lname.value === '') {

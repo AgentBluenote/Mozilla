@@ -29,10 +29,10 @@ The overall mark awarded is out of 27. Work out their final mark, and then divid
   <li> or even just <code>'images/pic' + i + '.jpg'</code></li>
 </ul>
 
-Because the event handlers will be applied after the loop has run, therefore we will just get the <code>src</code> of the last image each time. You need to grab the <code>src</code> value from the event target in each case, so you need to pass the event object as a parameter to the handler function (<code>e</code>, <code>evt</code>, <code>event</code> or similar is fine), and then use something like this: <code>var imgSrc = e.target.getAttribute('src');</code> to get the <code>src</code> value. An anonymous function would make most sense:
+Because the event handlers will be applied after the loop has run, therefore we will just get the <code>src</code> of the last image each time. You need to grab the <code>src</code> value from the event target in each case, so you need to pass the event object as a parameter to the handler function (<code>e</code>, <code>evt</code>, <code>event</code> or similar is fine), and then use something like this: <code>const imgSrc = e.target.getAttribute('src');</code> to get the <code>src</code> value. An anonymous function would make most sense:
 <pre>
 newImage.onclick = function(e) {
-  var imgSrc = e.target.getAttribute('src');
+  const imgSrc = e.target.getAttribute('src');
     ...
 }
 </pre>
@@ -40,15 +40,15 @@ newImage.onclick = function(e) {
 <dt>Run a function, passing it the returned <code>src</code> value as a parameter.</dt>
 <dd>Two marks for this. To run the function, you need to do something like this: <code>displayImage(imgSrc);</code></dd>
 <dt>This event handler function should set the src attribute value...</dt>
-<dd>Four marks for this. The student needs to define their own function, which is passed one parameter, the returned <code>src</code> value. The full-size image is reference by the <code>displayedImage</code> variable, so to make it display the correct image, we need something like <code>displayedImage.setAttribute('src', imgSrc);</code>.</dd>
+<dd>Four marks for this. The student needs to define their own function, which is passed one parameter, the returned <code>src</code> value. The full-size image is reference by the <code>displayedImage</code> constant, so to make it display the correct image, we need something like <code>displayedImage.setAttribute('src', imgSrc);</code>.</dd>
 </dl>
 
 ## Writing a handler that runs the darken/lighten button
 <dl>
 <dt>Adding an onclick handler</dt>
-<dd>Two marks; the <code>&lt;button&gt;</code> is referenced in the <code>btn</code> variable, so the handler will need to look something like <code>btn.onclick = function() { ... }</code>. In this case, invoking a named function would also be ok, e.g. <code>btn.onclick = myFunction;</code></dd>
+<dd>Two marks; the <code>&lt;button&gt;</code> is referenced in the <code>btn</code> constant, so the handler will need to look something like <code>btn.onclick = function() { ... }</code>. In this case, invoking a named function would also be ok, e.g. <code>btn.onclick = myFunction;</code></dd>
 <dt>Checking the current class name set on the <code>&lt;button&gt;</code> element</dt>
-<dd>Two marks; this again uses <code>getAttribute()</code>, and you just need to run this on the <code>btn</code> variable — <code>var btnClass = btn.getAttribute('class');</code>
+<dd>Two marks; this again uses <code>getAttribute()</code>, and you just need to run this on the <code>btn</code> constant — <code>const btnClass = btn.getAttribute('class');</code>
 <dt>The conditional statement</dt>
 <dd>Six marks for this. It is not that complex, but there is a fair bit of work to do here. The conditional statement just needs to look like this:
 <pre>
@@ -61,7 +61,7 @@ if(btnClass === 'dark') {
 Then the student needs to grab the three lines provided in the assessment text, and modify it to set the things that are needed in each state. So a finished event handler could look something like this:
 <pre>
 btn.onclick = function() {
-  var btnClass = btn.getAttribute('class');
+  const btnClass = btn.getAttribute('class');
   if(btnClass === 'dark') {
     btn.setAttribute('class','light');
     btn.textContent = 'Lighten';

@@ -48,13 +48,13 @@
     </ul>
 
     <script>
-      var select = document.querySelector('select');
-      var list = document.querySelector('ul');
-      var h1 = document.querySelector('h1');
+      const select = document.querySelector('select');
+      const list = document.querySelector('ul');
+      const h1 = document.querySelector('h1');
 
       select.onchange = function() {
-        var choice = select.value;
-        var days = 31;
+        const choice = select.value;
+        let days = 31;
 
         if(choice === 'February') {
           days = 28;
@@ -68,14 +68,14 @@
       function createCalendar(days, choice) {
         list.innerHTML = '';
         h1.textContent = choice;
-        for(var i = 1; i <= days; i++) {
-          var listItem = document.createElement('li');
+        for(let i = 1; i <= days; i++) {
+          const listItem = document.createElement('li');
           listItem.textContent = i;
           list.appendChild(listItem);
         }
       }
 
-      createCalendar(31,'January');
+      createCalendar(31, 'January');
     </script>
   </body>
 </html>

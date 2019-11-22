@@ -13,7 +13,7 @@ const height = canvas.height = window.innerHeight;
 
 // function to generate random number
 
-const random = (min,max) =>  {
+function random(min,max) {
 	const num = Math.floor(Math.random()*(max-min)) + min;
 	return num;
 };
@@ -118,17 +118,17 @@ class EvilCircle extends Shape {
 	setControls() {
 		const _this = this;
 		window.onkeydown = function(e) {
-			switch(e.keyCode) {
-				case 65:
+			switch(e.key) {
+				case 'a':
 					_this.x -= _this.velX;
 					break;
-				case 68:
+				case 'd':
 					_this.x += _this.velX;
 					break;
-				case 87:
+				case 'w':
 					_this.y -= _this.velY;
 					break;
-				case 83:
+				case 's':
 					_this.y += _this.velY;
 					break;
 			}
@@ -154,7 +154,7 @@ class EvilCircle extends Shape {
 
 // define array to store balls and populate it
 
-const balls = [];
+let balls = [];
 
 while (balls.length < 25) {
 	const size = random(10, 20);
@@ -174,14 +174,14 @@ while (balls.length < 25) {
 	para.textContent = 'Ball count: ' + count;
 }
 
-const evilBall = new EvilCircle(
+let evilBall = new EvilCircle(
 	random(0, width),
 	random(0, height),
 	true
 );
 evilBall.setControls();
 
-const loop = () => {
+function loop() {
 	ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
 	ctx.fillRect(0, 0, width, height);
 

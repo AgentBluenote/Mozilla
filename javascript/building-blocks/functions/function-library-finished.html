@@ -16,8 +16,8 @@
   <p></p>
 
   <script>
-    var input = document.querySelector('.numberInput');
-    var para = document.querySelector('p');
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
 
     function squared(num) {
       return num * num;
@@ -28,7 +28,7 @@
     }
 
     function factorial(num) {
-      var x = num;
+      let x = num;
       while(x > 1) {
         num *= x-1;
         x--;
@@ -38,7 +38,7 @@
     }
 
     input.onchange = function() {
-      var num = input.value;
+      const num = input.value;
       if(isNaN(num)) {
         para.textContent = 'You need to enter a number!';
       } else {
