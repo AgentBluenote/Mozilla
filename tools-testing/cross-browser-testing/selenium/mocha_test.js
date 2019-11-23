@@ -1,14 +1,14 @@
 'use strict';
 
-var assert = require('assert');
+const assert = require('assert');
 
-var webdriver = require('selenium-webdriver'),
+let webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
 describe('Alert', () => {
   it('should have the correct text content - this is from the first button', done => {
-    var driver = new webdriver.Builder()
+    let driver = new webdriver.Builder()
         .withCapabilities(webdriver.Capabilities.firefox())
         .build();
 

@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var htmltidy = require('gulp-htmltidy');
-var autoprefixer = require('gulp-autoprefixer');
-var csslint = require('gulp-csslint');
-var babel = require('gulp-babel');
-var jshint = require('gulp-jshint');
+const gulp = require('gulp');
+const htmltidy = require('gulp-htmltidy');
+const autoprefixer = require('gulp-autoprefixer');
+const csslint = require('gulp-csslint');
+const babel = require('gulp-babel');
+const jshint = require('gulp-jshint');
 
 gulp.task('default', ['html', 'css', 'js']);
 
