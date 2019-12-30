@@ -3,7 +3,7 @@ The following guide outlines a marking guide for the MDN Learning Area JavaScrip
 
 Note: These are guidelines, not set in stone rules — you are of course free to use your judgement on mark awarding when you meet an edge case, or something that isn't clear cut.
 
-The overall mark awarded is out of 27. Work out their final mark, and then divide by 27 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
+The overall mark awarded is out of 21. Work out their final mark, and then divide by 21 and multiply by 100 to give a percentage mark. For reference, you can find a [finished program](main.js) that would be awarded top marks.
 
 ## Looping through the images
 
@@ -23,24 +23,13 @@ The overall mark awarded is out of 27. Work out their final mark, and then divid
 
 <dl>
 <dt>Find the value of the src attribute of the current image.</dt>
-<dd>Four marks for this — it is just a one line solution, but the specifics are quite tricky. You can't just do something like:
-<ul>
-  <li><code>newImage.getAttribute('src');</code></li>
-  <li> or even just <code>'images/pic' + i + '.jpg'</code></li>
-</ul>
-
-Because the event handlers will be applied after the loop has run, therefore we will just get the <code>src</code> of the last image each time. You need to grab the <code>src</code> value from the event target in each case, so you need to pass the event object as a parameter to the handler function (<code>e</code>, <code>evt</code>, <code>event</code> or similar is fine), and then use something like this: <code>const imgSrc = e.target.getAttribute('src');</code> to get the <code>src</code> value. An anonymous function would make most sense:
+<dd>Four marks for this; An anonymous function would make most sense:
 <pre>
 newImage.onclick = function(e) {
-  const imgSrc = e.target.getAttribute('src');
-    ...
+  displayedImage.src = e.target.src;
 }
 </pre>
 </dd>
-<dt>Run a function, passing it the returned <code>src</code> value as a parameter.</dt>
-<dd>Two marks for this. To run the function, you need to do something like this: <code>displayImage(imgSrc);</code></dd>
-<dt>This event handler function should set the src attribute value...</dt>
-<dd>Four marks for this. The student needs to define their own function, which is passed one parameter, the returned <code>src</code> value. The full-size image is reference by the <code>displayedImage</code> constant, so to make it display the correct image, we need something like <code>displayedImage.setAttribute('src', imgSrc);</code>.</dd>
 </dl>
 
 ## Writing a handler that runs the darken/lighten button
