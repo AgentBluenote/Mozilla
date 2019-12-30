@@ -1,6 +1,6 @@
 # Basic HTML text marking guide
 
-The aim of the tasks is to demonstrate an understanding of the properties covered in the [HTML text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) lesson in Learn Web Development on MDN.
+The aim of the tasks is to demonstrate an understanding of the HTML features covered in the [HTML text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) lesson in Learn Web Development on MDN.
 
 ## Task 1
 
