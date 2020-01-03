@@ -4,7 +4,7 @@ The aim of the tasks is to demonstrate an understanding of the HTML features cov
 
 ## Task 1
 
-This task tests your ability to embed a simple image on the page, give it some alternative text, and give it some height attributes. Ideally the answer should look something like this:
+This task tests your ability to embed a simple image on the page, give it some alternative text, and give it some `width` and `height` attributes. Ideally the answer should look something like this:
 
 ```
 <h1>Basic image embed</h1>
