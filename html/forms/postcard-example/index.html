@@ -31,8 +31,8 @@ body {
 
 form {
   position : relative;
-  width  : 600px;
-  height : 400px;
+  width  : 740px;
+  height : 498px;
   margin : 0 auto;
   padding: 1em;
   box-sizing: border-box;
@@ -44,7 +44,7 @@ form {
   grid-template-columns : repeat(2, 1fr);
   grid-template-rows    : 10em 1em 1em 1em;
 }
-        
+
 h1 {
   font : 1em "typewriter", monospace;
   align-self : end;
@@ -53,37 +53,31 @@ h1 {
 #message {
    grid-row: 1 / 5;
 }
-        
+
+#from, #reply {
+   display: flex;
+}
+
 label {
   font : .8em "typewriter", sans-serif;
 }
-        
-input, 
+
+input,
 textarea {
-  font    : .9em/1.5em "handwriting", cursive, sans-serif;
+  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
   border  : none;
   padding : 0 10px;
   margin  : 0;
   width   : 80%;
   background : none;
 }
-        
-input:focus, 
+
+input:focus,
 textarea:focus {
   background   : rgba(0,0,0,.1);
   border-radius: 5px;
 }
-        
-input:focus:not(:focus-visible), 
-textarea:focus:not(:focus-visible) { 
-  outline : none; 
-}
-        
-input {
-    height: 2.5em; /* for IE */
-    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
-}
-        
+
 textarea {
   display : block;
 
