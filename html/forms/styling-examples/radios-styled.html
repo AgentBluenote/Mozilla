@@ -29,11 +29,12 @@
         font-size: 1.2em;
         transform: translate(3px, 3px) scale(0);
         transform-origin: center;
-        transition: all 0.4s;
+        transition: all 0.3s ease-in;
       }
 
       input[type="radio"]:checked::before {
         transform: translate(3px, 3px) scale(1);
+        transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
       }
     </style>
 </head>
