@@ -17,9 +17,22 @@
         margin-bottom: 20px;
       }
 
-      .appearence input {
+      select {
         -webkit-appearance: none;
         appearance: none;
+        position: relative;
+      }
+
+      .select-wrapper {
+        position: relative;
+      }
+
+      .select-wrapper::after {
+        content: "▼";
+        font-size: 1rem;
+        top: 6px;
+        right: 10px;
+        position: absolute;
       }
 
       button, label, input, select, progress, meter {
@@ -36,9 +49,6 @@
 
       input[type="text"], input[type="datetime-local"], input[type="color"], select {
         box-shadow: inset 1px 1px 3px #ccc;
-      }
-
-      input[type="text"], input[type="datetime-local"], input[type="color"] {
         border-radius: 5px;
       }
 
@@ -57,11 +67,11 @@
     <form>
       <div>
         <label for="select">Select box:</label>
-        <select id="select" name="select">
+        <div class="select-wrapper"><select id="select" name="select">
           <option>Banana</option>
           <option>Cherry</option>
           <option>Lemon</option>
-        </select>
+        </select></div>
       </div>
       <div>
         <label for="myFruit">"Favorite fruit?" datalist:</label>
