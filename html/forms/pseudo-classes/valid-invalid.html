@@ -52,7 +52,18 @@
         position: relative;
       }
 
-      input + span:after {
+      input:required + span::after {
+        font-size: 0.7rem;
+        position: absolute;
+        content: "required";
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        top: -26px;
+        left: -70px;
+      }
+
+      input + span::before {
         position: absolute;
         right: -20px;
         top: 5px;
@@ -62,12 +73,12 @@
         border: 2px solid red;
       }
 
-      input:invalid + span:after {
+      input:invalid + span::before {
         content: '✖';
         color: red;
       }
 
-      input:valid + span:after {
+      input:valid + span::before {
         content: '✓';
         color: green;
       }
@@ -84,14 +95,14 @@
       <fieldset>
         <legend>Feedback form</legend>
 
-        <p>Required fields are labelled with "*".</p>
+        <p>Required fields are labelled with "required".</p>
         <div>
-          <label for="fname">First name (*): </label>
+          <label for="fname">First name: </label>
           <input id="fname" name="fname" type="text" required>
           <span></span>
         </div>
         <div>
-          <label for="lname">Last name (*): </label>
+          <label for="lname">Last name: </label>
           <input id="lname" name="lname" type="text" required>
           <span></span>
         </div>
