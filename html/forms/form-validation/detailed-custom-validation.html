@@ -88,37 +88,41 @@
         // is valid, we remove the error message.
         emailError.innerHTML = ''; // Reset the content of the message
         emailError.className = 'error'; // Reset the visual state of the message
+      } else {
+        // If there is still an error, show the correct error
+        showError();
       }
     });
 
     form.addEventListener('submit', function (event) {
-      // Each time the user tries to send the data, we check
-      // if the email field is valid. If it is, we let the form submit
+      // if the email field is valid, we let the form submit
 
-      // If it isn't, we start the process of working out why it isn't
-      // and display an appropriate error message
       if(!email.validity.valid) {
-        if(email.validity.valueMissing) {
-          // If the field is empty
-          // display the following error message.
-          emailError.textContent = 'You need to enter an e-mail address.';
-        } else if(email.validity.typeMismatch) {
-          // If the field doesn't contain an email address
-          // display the following error message.
-          emailError.textContent = 'Entered value needs to be an e-mail address.';
-        } else if(email.validity.tooShort) {
-          // If the field doesn't contain an email address
-          // display the following error message.
-          emailError.textContent = `Email should be at least ${ email.minL ength } characters; you entered ${ email.value.length }.`;
-        }
-
-        // Update the styling appropriately
-        emailError.className = 'error active';
-
-        // Finally we prevent the form from being sent by canceling the event
+        // If it isn't, we display an appropriate error message
+        showError();
+        // Then we prevent the form from being sent by canceling the event
         event.preventDefault();
       }
     });
+
+    function showError() {
+      if(email.validity.valueMissing) {
+        // If the field is empty
+        // display the following error message.
+        emailError.textContent = 'You need to enter an e-mail address.';
+      } else if(email.validity.typeMismatch) {
+        // If the field doesn't contain an email address
+        // display the following error message.
+        emailError.textContent = 'Entered value needs to be an e-mail address.';
+      } else if(email.validity.tooShort) {
+        // If the data is too short
+        // display the following error message.
+        emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+      }
+
+      // Set the styling appropriately
+      emailError.className = 'error active';
+    }
   </script>
 </body>
 
