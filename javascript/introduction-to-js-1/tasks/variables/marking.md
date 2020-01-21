@@ -6,7 +6,7 @@ Note: If there is an error in your code, it will be outputted into the results p
 
 ## Task 1
 
-This task covers basic understanding of declaring a variable with a value, then initializing it. Ideally your code should look something like this:
+This task covers basic understanding of declaring a variable with a value, and initializing it — both separately and at the same time. Ideally your code should look something like this:
 
 ```
 let myName;
