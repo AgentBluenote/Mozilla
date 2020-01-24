@@ -1,6 +1,6 @@
 # JavaScript arrays marking guide
 
-The aim of the tasks is to demonstrate an understanding of the JavaScript features covered in the [Arrays](https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays) lesson in Learn Web Development on MDN.
+The aim of the tasks is to demonstrate an understanding of the JavaScript features covered in the [Arrays](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays) lesson in Learn Web Development on MDN.
 
 Note: If there is an error in your code, it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
@@ -43,12 +43,10 @@ let myArray = myString.split('+');
 
 let arrayLength = myArray.length;
 
-let lastItem = myArray[myArray.length - 1];
+let lastItem = myArray[arrayLength - 1];
 ```
 
 ## Task 3
-
-For our final array task, we are working in somewhat the opposite direction.
 
 You should start by popping the last item off the array using `myArray.pop()`.
 

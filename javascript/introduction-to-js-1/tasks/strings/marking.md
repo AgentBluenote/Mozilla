@@ -28,7 +28,7 @@ Next up, task 2 requires the student to:
 
 * Check the length of the provided string using `.length`, and store the result in a variable called `quoteLength`.
 * Find the index of the substring 'green eggs and ham' using `.indexOf` and store it in `index`.
-* Use a combination of the variables you have, `.length`, and `.slice`, to trim down the original quote to 'I do not like green eggs and ham.', and store it in `revisedQuote`.
+* Use a combination of the variables you have, `.length`, and `.slice()`, to trim down the original quote to 'I do not like green eggs and ham.', and store it in `revisedQuote`.
 
 ```
 let quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';

@@ -8,7 +8,7 @@ Note: If there is an error in your code, it will be outputted into the results p
 
 In this task you need to create four variables that contain numbers. The first two need to be added together and stored, while the fourth needs to be subtracted from the third and the result stored. The two results of these operations need to be multiplied together to create another result, 48, which should be stored in the variable `finalResult`.
 
-Finally, you need to write a calculation that checks whether this number is even or odd, with the result stored in `evenOddCheck`.
+Finally, you need to write a calculation that checks whether this number is even or odd, with the result stored in `evenOddCheck`. The operator you need here is modulo (`%`). If your value modulo 2 equals 0, you know it is even.
 
 The answer should look something like this:
 
