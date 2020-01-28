@@ -28,7 +28,7 @@ btn.addEventListener('click', () => {
 
 ## Task 2
 
-Now we'll look at keyboard events. To pass this assessment you need to build an event handler that moves a character around a canvas when the WASD keeys are pressed on the keyboard.
+Now we'll look at keyboard events. To pass this assessment you need to build an event handler that moves the circle around the provided canvas when the WASD keys are pressed on the keyboard. The circle is drawn with the function `drawCircle()`.
 
 The finished code should look something like this:
 

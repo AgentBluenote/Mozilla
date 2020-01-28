@@ -27,7 +27,7 @@ chooseName();
 
 ## Task 2
 
-For our second functions-related task, you need to create a function that draws a rectangle on the `<canvas>` inside the output panel, based on five input variables — `x`, `y`, `width`, `height`, and `color`.
+For our second functions-related task, you need to create a function that draws a rectangle on the provided `<canvas>`, based on five input variables — `x`, `y`, `width`, `height`, and `color`.
 
 You'll want to clear the canvas before drawing, so that when the code is updated in the case of the live version, you don't get lots of rectangles drawn on top of one another.
 
@@ -55,7 +55,7 @@ drawSquare(x, y, width, height, color);
 
 ## Task 3
 
-In this task, you return to the problem posed in Task 1, with the aim of imprpoving it. The three improvements we are expecting here are:
+In this task, you return to the problem posed in Task 1, with the aim of improving it. The three improvements we are expecting here are:
 
 1. Refactor the code that generates the random number into a separate function that takes two generic bounds that the random number should be between, and returns the result.
 2. Update the `chooseName()` function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns its result.
