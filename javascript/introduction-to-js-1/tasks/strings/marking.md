@@ -45,7 +45,7 @@ let revisedQuote = quote.slice(0, index + substring.length + 1);
 
 ## Task 3
 
-For our final string task, we return to our Green Eggs and Ham revised quote, which someone has messed up. You need to:
+For our next string task, we return to our Green Eggs and Ham revised quote, which someone has messed up. You need to:
 
 * Fix the casing. The best way to do this is to put it all in lower case using `.toLowerCase()`, and then put the first letter in uppercase using `replace()`, `slice()`, and `toUpperCase()`. Store the new quote in `fixedQuote`.
 * Replace `green eggs and ham` with whatever food you really don't like using `replace()`.
@@ -65,3 +65,25 @@ fixedQuote.replace('green eggs and ham', 'pickled onions');
 let fullStop = '.';
 let finalQuote = fixedQuote + fullStop;
 ```
+
+## Task 4
+
+Our final string task looks at your ability to use template literals. Your answer is expected to take the existing string literal, `myString`, turn it into a template literal, and include four placeholders in place of the asterisks:
+
+* The `theorem` string.
+* The value of `a`.
+* The value of `b`. 
+* The length of the hypotenuse, if `a` and `b` are the lengths of the two shortest sides of a right-angled triangle. You can use pythagoras' theorem to work this out.
+
+Your code should look something like this:
+
+```
+let theorem = 'Pythagorean theorem';
+
+let a = 5;
+let b = 8;
+
+let myString = `Using ${ theorem }, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)) }.`;
+```
+
+You could also a simpler form of the fourth placeholder, something like `${ Math.sqrt((a * a) + (b * b)) }`.
