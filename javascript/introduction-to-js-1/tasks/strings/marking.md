@@ -72,7 +72,7 @@ Our final string task looks at your ability to use template literals. Your answe
 
 * The `theorem` string.
 * The value of `a`.
-* The value of `b`. 
+* The value of `b`.
 * The length of the hypotenuse, if `a` and `b` are the lengths of the two shortest sides of a right-angled triangle. You can use pythagoras' theorem to work this out.
 
 Your code should look something like this:
@@ -83,7 +83,7 @@ let theorem = 'Pythagorean theorem';
 let a = 5;
 let b = 8;
 
-let myString = `Using ${ theorem }, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)) }.`;
+let myString = `Using ${ theorem }, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt((a**2) + (b**2)) }.`;
 ```
 
-You could also a simpler form of the fourth placeholder, something like `${ Math.sqrt((a * a) + (b * b)) }`.
+You could use a different form of the fourth placeholder, such as `Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))` or `${ Math.sqrt((a * a) + (b * b)) }`.
