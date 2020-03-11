@@ -31,7 +31,7 @@ let square = new Shape('square', 4, 5);
 
 square.calcPerimeter();
 
-let triangle = new square.constructor('triangle', 3, 3)
+let triangle = new Shape('triangle', 3, 3);
 
 triangle.calcPerimeter();
 ```
@@ -88,8 +88,9 @@ class Shape {
 }
 
 class Square extends Shape {
-  constructor(name, sides, sideLength) { 
-    super(name, sides, sideLength); 
+  constructor(sides, sideLength) { 
+    super(name, sides, sideLength);
+    this.name = 'square'; 
   }
   
   calcArea() {
@@ -97,7 +98,8 @@ class Square extends Shape {
   };
 }
 
-let square = new Square('square', 4, 5);
+let square = new Square(4, 5);
+
 
 square.calcPerimeter();
 square.calcArea();
