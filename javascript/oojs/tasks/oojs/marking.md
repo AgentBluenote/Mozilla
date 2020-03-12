@@ -88,17 +88,16 @@ class Shape {
 }
 
 class Square extends Shape {
-  constructor(sides, sideLength) { 
-    super(name, sides, sideLength);
-    this.name = 'square'; 
+  constructor(sideLength) { 
+    super('square', 4, sideLength); 
   }
   
   calcArea() {
-    console.log(`The ${ this.name }'s area is ${ this.sides * this.sides } squared.`);
+    console.log(`The ${ this.name }'s area is ${ this.sideLength * this.sideLength } squared.`);
   };
 }
 
-let square = new Square(4, 5);
+let square = new Square(4);
 
 
 square.calcPerimeter();
