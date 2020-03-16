@@ -74,7 +74,7 @@ In this task we want you to take the code you wrote for the previous example, an
 
 Use the switch `default` option for the "not possible" option.
 
-Your added code should look like this:
+The full `if ... else` block including added `switch` statement should look like this:
 
 ```
 if(machineActive) {
