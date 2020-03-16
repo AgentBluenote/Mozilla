@@ -74,15 +74,11 @@ In this task we want you to take the code you wrote for the previous example, an
 
 Use the switch `default` option for the "not possible" option.
 
-The code should look like this:
+Your added code should look like this:
 
 ```
-let response;
-let score = 75;
-let machineActive = false;
-
 if(machineActive) {
-	switch (score) {
+	switch (true) {
 		case (score >= 0 && score < 20):
 		  response = 'That was a terrible score — total fail!';
 		  break;
