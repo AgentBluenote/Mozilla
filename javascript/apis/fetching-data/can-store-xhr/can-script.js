@@ -83,20 +83,20 @@ function initialize(products) {
         let lowerCaseType = category.value.toLowerCase();
         for(let i = 0; i < products.length ; i++) {
           // If a product's type property is the same as the chosen category, we want to
-          // dispay it, so we push it onto the categoryGroup array
+          // display it, so we push it onto the categoryGroup array
           if(products[i].type === lowerCaseType) {
             categoryGroup.push(products[i]);
           }
         }
 
-        // Run selectProducts() after the filtering has bene done
+        // Run selectProducts() after the filtering has been done
         selectProducts();
       }
     }
   }
 
   // selectProducts() Takes the group of products selected by selectCategory(), and further
-  // filters them by the tnered search term (if one has bene entered)
+  // filters them by the tiered search term (if one has been entered)
   function selectProducts() {
     // If no search term has been entered, just make the finalGroup array equal to the categoryGroup
     // array — we don't want to filter the products further — then run updateDisplay().
