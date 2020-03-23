@@ -21,9 +21,9 @@ let number4 = 8;
 let additionResult = number1 + number2;
 let subtractionResult = number3 - number4;
 
-let finalNumber = additionResult * subtractionResult;
+finalResult = additionResult * subtractionResult;
 
-let evenOddResult = finalNumber % 2;
+evenOddResult = finalResult % 2;
 ```
 
 This task also tests your variable naming abilities. An extra mark if the variables have sensible names that follow best practices (lower camel case, descriptive, not too long).
